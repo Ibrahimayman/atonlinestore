@@ -17,8 +17,8 @@ var express = require('express'),
     passport = require("passport"),
     formidable = require("express-formidable"),
     expressValidator = require('express-validator'),
+    favicon = require('serve-favicon'),
     stripe = require("stripe")('sk_test_90yMCyP0kAVCmeJSs22PDx2m');
-
 
 var Category = require("./models/category");
 var cartLentgh = require("./middlewares/middlewares");
@@ -30,14 +30,13 @@ app.use(morgan("dev"));  // middleware used to log when you made an http verb. u
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 // app.use(formidable());
-
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 // validator Middleware
 app.use(expressValidator({
     errorFormatter: function (param, msg, value) {
         var namespace = param.split('.')
             , root = namespace.shift()
             , formParam = root;
-
         while (namespace.length) {
             formParam += '[' + namespace.shift() + ']';
         }
