@@ -149,12 +149,7 @@ app.all('/admin*', billRoutes, ensureAdmin);
 app.use('/admin', billRoutes, ensureAdmin);
 
 
-app.listen(secret.port, function (err) {
-    if (err) {
-        console.log(err)
-    }
-    else {
-        console.log("App working on : " + secret.port);
-    }
+app.listen(process.env.PORT || 3000, function(){
+    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });
 
