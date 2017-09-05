@@ -97,10 +97,10 @@
                             <p>
                                 <% for (var j = 0; j < newArrivals[i].Status.length; j++) { %>
                                 <% if(newArrivals[i].Status[j] === "sale"){ %>
-                                <del> <%= newArrivals[i].price - newArrivals[i].priceAfterOffer %>  </del>
+                                <del> <%= newArrivals[i].buyingPrice - newArrivals[i].priceAfterOffer %>  </del>
                                 <% } %>
                                 <% } %>
-                                <em class="item_price"> <%= newArrivals[i].price %> ج . م </em></p>
+                                <em class="item_price"> <%= newArrivals[i].buyingPrice %> ج . م </em></p>
 
                             <a href="/product/<%= newArrivals[i]._id %>"
                                data-text="Add To Cart" class="my-cart-b item_add">شراء</a>

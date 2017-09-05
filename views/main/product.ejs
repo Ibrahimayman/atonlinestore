@@ -27,7 +27,7 @@
                         <div class="block">
                             <div class="starbox small ghosting"></div>
                         </div>
-                        <p class="price item_price"><%= product.price %> ج.م </p>
+                        <p class="price item_price"><%= product.buyingPrice %> ج.م </p>
                         <!--<div class="description">-->
                         <!--<p><span>مراجهة سريعة : </span> In cursus faucibus tortor eu vestibulum. Ut eget turpis ac-->
                         <!--justo porta varius. Donec vel felis ante, ac vehicula ipsum. Quisque sed diam metus.-->
@@ -48,10 +48,10 @@
                             </div>
                             <div class="women">
                                 <input type="hidden" name="product_id" id="product_id" value="<%= product._id %>"/>
-                                <input type="hidden" name="priceHidden" id="priceHidden" value="<%= product.price %>"/>
+                                <input type="hidden" name="priceHidden" id="priceHidden" value="<%= product.buyingPrice %>"/>
                                 <input type="hidden" name="item" class="form-control" value="<%= product.name %>"/>
                                 <input type="text" name="priceValue" id="priceValue" class="form-control"
-                                       value="<%= product.price %>"/>
+                                       value="<%= product.buyingPrice %>"/>
 
                                 <br/>
                                 <% if (user) { %>
@@ -92,7 +92,7 @@
                         <div class="block">
                             <div class="starbox small ghosting"></div>
                         </div>
-                        <span class=" price-in1"> <%= SimilarProducts[i].price %> ج . م  </span>
+                        <span class=" price-in1"> <%= SimilarProducts[i].buyingPrice %> ج . م  </span>
                     </div>
                     <div class="clearfix"></div>
                 </div>

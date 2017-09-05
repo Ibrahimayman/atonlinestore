@@ -2,7 +2,46 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd284a70-dd67-4c44-9e8a-555644d18d7d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.js" afterPath="$PROJECT_DIR$/server.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/03066fdb86ce65a2c397cd6d70c030021502542172478.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/04e7cf541cb6c2ad8be2e087d05a04aa1501851597712.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/10074a1b2ade3eb93176d2cf17b9a7a51501851597714.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/142a97c2bdadabda5144997d1085fb621501851719427.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/15b61e96f693b03f3a73605994a199df1502541784076.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/1f171b2718fd76dc3c0f1ce1fad426261502541839420.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/25a627d087cd855e1cd1033f2eed04381502563103691.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/2a3570c207efccc2e82a787877ee2acc1502541902484.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/2b648a4743103f037addb7de6d93f6201502563588940.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/2c1cebfe849b737b922534bedaf7a7141501851719420.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/36a82cb3a197c7f6956270b1cb0e759e1502542017649.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/36b4b70a8ea4aeeb9fd8e84f9d351e581501851597717.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/379d527a2029a649b178ecda31b65ca51501851405853.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/49858ab5aa51558d21b30d30e0bfd3e71502542017649.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/4d7434fecc101074f01dd1e40385d7721501851719427.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/5465b196bdb4c243d575aa3c153f8a531501851405858.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/559fa418420de89e9f20f1031b2c3d091501853754113.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/57340bb56a1685b020ab9ca777a3c84b1502542017649.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/6ce355cbba3fc649524cdcf13972c0eb1502563103690.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/6e08f434c8004e6b984a2118b3fe16311502542116066.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/7a35898176efca6e93c335516a5f9dcb1502542116066.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/962ed94b538763287b2e49f2543e7adb1502563588940.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/9cb2b344de0b85b9875c1377fda721ec1502541784078.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/a3a0d1420ef77bb2996a914ffef92e4e1502541967252.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/ae337768a598d614730c700d3030598e1502541784078.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/b6c3045885079e38ece02205d4d073671502541725356.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/c6ba1c699dc60b214a2a7efc715992031502542059492.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/d94f9f01b05bb33331cb0684d38f7dc11502541967252.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/dbc67690089963bd511cc9e9890148831502542116065.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/e219dfefa8b49fe2c1d062291d27f19f1502542059492.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/e28ca9c392b45aab385ce1ee1079d81c1501853487869.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/e446f67cd3496e5fecd8f54db996b49f1501861364755.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/e58ac189908e582100fad01a438fcf031502542059492.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/eb01444f1ea0ead727a48f7aeb9f4a8d1502541645472.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/f2ff6546e2fd6d3bd6e93a2bcd96bec51502541784078.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/f81f8b68683d0503c744d64f7b9ae45f1501851597715.jpeg" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/main/category.ejs" afterPath="$PROJECT_DIR$/views/main/category.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/main/product-main.ejs" afterPath="$PROJECT_DIR$/views/main/product-main.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/main/product.ejs" afterPath="$PROJECT_DIR$/views/main/product.ejs" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,11 +55,61 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="server.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/server.js">
+      <file leaf-file-name="passport.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/passport.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="696">
-              <caret line="155" column="0" lean-forward="true" selection-start-line="155" selection-start-column="0" selection-end-line="155" selection-end-column="0" />
+            <state relative-caret-position="2975">
+              <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="product.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/product.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="475">
+              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="product.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/main/product.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="650">
+              <caret line="215" column="30" lean-forward="true" selection-start-line="215" selection-start-column="30" selection-end-line="215" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="category.ejs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/main/category.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="371">
+              <caret line="66" column="0" lean-forward="true" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="users.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/users.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/user.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="571">
+              <caret line="150" column="0" lean-forward="false" selection-start-line="150" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -74,10 +163,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/views/partials/heder-bottom.ejs" />
         <option value="$PROJECT_DIR$/views/partials/navbarAccount.ejs" />
         <option value="$PROJECT_DIR$/views/layoutAccounts.ejs" />
-        <option value="$PROJECT_DIR$/views/main/product-main.ejs" />
         <option value="$PROJECT_DIR$/views/partials/navbar.ejs" />
         <option value="$PROJECT_DIR$/public/js/custome.js" />
         <option value="$PROJECT_DIR$/models/user.js" />
@@ -121,10 +208,12 @@
         <option value="$PROJECT_DIR$/models/product.js" />
         <option value="$PROJECT_DIR$/routes/product.js" />
         <option value="$PROJECT_DIR$/views/admin/add-product.ejs" />
-        <option value="$PROJECT_DIR$/views/main/product.ejs" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/server.js" />
+        <option value="$PROJECT_DIR$/views/main/product.ejs" />
+        <option value="$PROJECT_DIR$/views/main/product-main.ejs" />
+        <option value="$PROJECT_DIR$/views/main/category.ejs" />
       </list>
     </option>
   </component>
@@ -146,7 +235,7 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-9" />
     <option name="y" value="-9" />
     <option name="width" value="1938" />
@@ -177,6 +266,17 @@
             <path>
               <item name="EcommerceV0.1" type="b2602c69:ProjectViewProjectNode" />
               <item name="EcommerceV0.1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EcommerceV0.1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EcommerceV0.1" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EcommerceV0.1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EcommerceV0.1" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -249,15 +349,15 @@
       <workItem from="1504266253287" duration="15051000" />
       <workItem from="1504349095320" duration="5346000" />
       <workItem from="1504519572972" duration="17325000" />
-      <workItem from="1504622855665" duration="6749000" />
+      <workItem from="1504622855665" duration="8984000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="143973000" />
+    <option name="totallyTimeSpent" value="146208000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1050" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15572916" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -293,20 +393,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/css/Admin/Adminstyle.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="4494" column="1" lean-forward="true" selection-start-line="4494" selection-start-column="1" selection-end-line="4494" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/myApp/profile/controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="25" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/main/how_to_buy.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -332,13 +418,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="421">
           <caret line="115" column="0" lean-forward="true" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/passport.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="671">
-          <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -447,13 +526,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="14" column="3" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/myApp/Product/controller.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -526,13 +598,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/main/product-main.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/mongoose/lib/model.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="177">
@@ -565,20 +630,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
           <caret line="21" column="47" lean-forward="true" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/main/product.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2030">
-          <caret line="237" column="0" lean-forward="true" selection-start-line="237" selection-start-column="0" selection-end-line="237" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/product.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="17" column="12" lean-forward="false" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -640,8 +691,64 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="696">
+        <state relative-caret-position="2496">
           <caret line="155" column="0" lean-forward="true" selection-start-line="155" selection-start-column="0" selection-end-line="155" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="571">
+          <caret line="150" column="0" lean-forward="false" selection-start-line="150" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/passport.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2975">
+          <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/product.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/main/product-main.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="108" column="0" lean-forward="true" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/main/product.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="650">
+          <caret line="215" column="30" lean-forward="true" selection-start-line="215" selection-start-column="30" selection-end-line="215" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/main/category.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="66" column="0" lean-forward="true" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
           <folding />
         </state>
       </provider>
