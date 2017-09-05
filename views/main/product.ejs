@@ -1,0 +1,381 @@
+<% layout('boilerplate') %>
+
+<title> <%= product.name %> </title>
+<!--single-->
+<div class="single-wl3">
+    <div class="container" ng-controller="commentsCtrl">
+        <div class="single-grids">
+            <div class="col-md-9 single-grid">
+                <div clas="single-top">
+                    <div class="single-left">
+                        <div class="flexslider">
+                            <ul class="slides">
+                                <% for (var i = 0; i < product.image.length; i++) { %>
+                                <li data-thumb="/public/uploads/<%= product.image[i].name %>">
+                                    <div class="thumb-image">
+                                        <img src="/public/uploads/<%= product.image[i].name %>"
+                                             data-imagezoom="true"
+                                             class="img-responsive">
+                                    </div>
+                                </li>
+                                <% } %>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="single-right simpleCart_shelfItem">
+                        <h4><%= product.name %></h4>
+                        <div class="block">
+                            <div class="starbox small ghosting"></div>
+                        </div>
+                        <p class="price item_price"><%= product.price %> ج.م </p>
+                        <!--<div class="description">-->
+                        <!--<p><span>مراجهة سريعة : </span> In cursus faucibus tortor eu vestibulum. Ut eget turpis ac-->
+                        <!--justo porta varius. Donec vel felis ante, ac vehicula ipsum. Quisque sed diam metus.-->
+                        <!--Quisque eget leo sit amet erat varius rutrum vitae dapibus lectus. Vivamus et sapien-->
+                        <!--ante. Suspendisse potenti. Fusce in tellus est, ac consequat.</p>-->
+                        <!--</div>-->
+                        <form method="post" action="/product/:product_id">
+                            <div class="color-quality">
+                                <h6>الكمية :</h6>
+                                <div class="quantity">
+                                    <input type="hidden" name="quantity" id="quantity" value="1"/>
+                                    <div class="quantity-select">
+                                        <button type="button" id="minus" class="btn btn-default">-</button>
+                                        <button type="button" id="total" class="btn btn-default">1</button>
+                                        <button type="button" id="plus" class="btn btn-default">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="women">
+                                <input type="hidden" name="product_id" id="product_id" value="<%= product._id %>"/>
+                                <input type="hidden" name="priceHidden" id="priceHidden" value="<%= product.price %>"/>
+                                <input type="hidden" name="item" class="form-control" value="<%= product.name %>"/>
+                                <input type="text" name="priceValue" id="priceValue" class="form-control"
+                                       value="<%= product.price %>"/>
+
+                                <br/>
+                                <% if (user) { %>
+                                <button type="submit" id="AddToCart" class="btn btn-primary btn-lg">
+                                    اضف الي العربة
+                                    <i class="glyphicon glyphicon-shopping-cart"></i>
+
+                                </button>
+                                <% } else { %>
+                                <a href="/signup" class="btn btn-warning btn-lg">تسجل دخول لاتمام عملية الشراء</a>
+                                <% } %>
+
+                            </div>
+                        </form>
+                        <div class="social-icon" id="shareRoundIcons">
+                            <!--<a href="#" class="btn btn-social-icon btn-facebook"><i class="fa fa-facebook"></i></a>-->
+                            <!--<a class="btn btn-social-icon btn-twitter" href="#"><i class="fa fa-twitter"></i></a>-->
+                            <!--<a class="btn btn-social-icon btn-pinterest" href="#"><i class="fa fa-pinterest"></i></a>-->
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="col-md-3 single-grid1">
+                <h3>منتجات مشابهة</h3>
+                <% for (var i = 0; i < SimilarProducts.length ; i++) { %>
+                <div class="recent-grids">
+                    <div class="recent-left">
+                        <a href="/product/<%= SimilarProducts[i]._id %>">
+                            <img class="img-responsive"
+                                 src="/public/uploads/<%= SimilarProducts[i].image[0].name %>" alt="">
+                        </a>
+                    </div>
+                    <div class="recent-right">
+                        <h6 class="best2"><a
+                                    href="/product/<%= SimilarProducts[i]._id %>"><%= SimilarProducts[i].name %></a>
+                        </h6>
+                        <div class="block">
+                            <div class="starbox small ghosting"></div>
+                        </div>
+                        <span class=" price-in1"> <%= SimilarProducts[i].price %> ج . م  </span>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <% } %>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <!--Product Description-->
+        <div class="product-w3agile">
+            <h3 class="tittle1">تفاصيل المنتج</h3>
+            <div class="product-grids">
+                <div class="col-md-4 product-grid">
+                    <div id="owl-demo" class="owl-carousel">
+                        <div class="item">
+                            <div class="recent-grids">
+                                <div class="recent-left">
+                                    <a href="single.html"><img class="img-responsive " src="images/r.jpg" alt=""></a>
+                                </div>
+                                <div class="recent-right">
+                                    <h6 class="best2"><a href="single.html">Lorem ipsum dolor </a></h6>
+                                    <div class="block">
+                                        <div class="starbox small ghosting"></div>
+                                    </div>
+                                    <span class=" price-in1"> $ 29.00</span>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="recent-grids">
+                                <div class="recent-left">
+                                    <a href="single.html"><img class="img-responsive " src="images/r1.jpg" alt=""></a>
+                                </div>
+                                <div class="recent-right">
+                                    <h6 class="best2"><a href="single.html">Duis aute irure </a></h6>
+                                    <div class="block">
+                                        <div class="starbox small ghosting"></div>
+                                    </div>
+                                    <span class=" price-in1"> $ 19.00</span>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="recent-grids">
+                                <div class="recent-left">
+                                    <a href="single.html"><img class="img-responsive " src="images/r2.jpg" alt=""></a>
+                                </div>
+                                <div class="recent-right">
+                                    <h6 class="best2"><a href="single.html">Lorem ipsum dolor </a></h6>
+                                    <div class="block">
+                                        <div class="starbox small ghosting"></div>
+                                    </div>
+                                    <span class=" price-in1"> $ 19.00</span>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="recent-grids">
+                                <div class="recent-left">
+                                    <a href="single.html"><img class="img-responsive " src="images/r3.jpg" alt=""></a>
+                                </div>
+                                <div class="recent-right">
+                                    <h6 class="best2"><a href="single.html">Ut enim ad minim </a></h6>
+                                    <div class="block">
+                                        <div class="starbox small ghosting"></div>
+                                    </div>
+                                    <span class=" price-in1">$ 45.00</span>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="recent-grids">
+                                <div class="recent-left">
+                                    <a href="single.html"><img class="img-responsive " src="images/r4.jpg" alt=""></a>
+                                </div>
+                                <div class="recent-right">
+                                    <h6 class="best2"><a href="single.html">Lorem ipsum dolor </a></h6>
+                                    <div class="block">
+                                        <div class="starbox small ghosting"></div>
+                                    </div>
+                                    <span class=" price-in1"> $ 29.00</span>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="recent-grids">
+                                <div class="recent-left">
+                                    <a href="single.html"><img class="img-responsive " src="images/r5.jpg" alt=""></a>
+                                </div>
+                                <div class="recent-right">
+                                    <h6 class="best2"><a href="single.html">Duis aute irure </a></h6>
+                                    <div class="block">
+                                        <div class="starbox small ghosting"></div>
+                                    </div>
+                                    <span class=" price-in1"> $ 19.00</span>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="recent-grids">
+                                <div class="recent-left">
+                                    <a href="single.html"><img class="img-responsive " src="images/r2.jpg" alt=""></a>
+                                </div>
+                                <div class="recent-right">
+                                    <h6 class="best2"><a href="single.html">Lorem ipsum dolor </a></h6>
+                                    <div class="block">
+                                        <div class="starbox small ghosting"></div>
+                                    </div>
+                                    <span class=" price-in1"> $ 19.00</span>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="recent-grids">
+                                <div class="recent-left">
+                                    <a href="single.html"><img class="img-responsive " src="images/r3.jpg" alt=""></a>
+                                </div>
+                                <div class="recent-right">
+                                    <h6 class="best2"><a href="single.html">Ut enim ad minim </a></h6>
+                                    <div class="block">
+                                        <div class="starbox small ghosting"></div>
+                                    </div>
+                                    <span class=" price-in1">$ 45.00</span>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <img class="img-responsive " src="images/woo2.jpg" alt="">
+                </div>
+                <div class="col-md-8 product-grid1">
+                    <div class="tab-wl3">
+                        <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+                            <ul id="myTab" class="nav nav-tabs left-tab" role="tablist">
+                                <li role="presentation" class="active"><a href="#home" id="home-tab" role="tab"
+                                                                          data-toggle="tab" aria-controls="home"
+                                                                          aria-expanded="true">التفاصيل</a></li>
+                                <li role="presentation"><a href="#reviews" role="tab" id="reviews-tab" data-toggle="tab"
+                                                           aria-controls="reviews">الاراء</a></li>
+
+                            </ul>
+                            <div id="myTabContent" class="tab-content">
+                                <div role="tabpanel" class="tab-pane fade in active" id="home"
+                                     aria-labelledby="home-tab">
+                                    <div class="descr">
+                                        <h4><%= product.name %> </h4>
+
+                                        <div class="video">
+
+                                        <iframe id="my-player" controls
+                                                class="video-js"
+                                                src="<%= product.videoSrc %>"
+                                                frameborder="0" allowfullscreen>
+                                        </iframe>
+
+                                        </div>
+
+                                        <p>
+                                            <%= product.description %>
+                                        </p>
+
+                                    </div>
+                                </div>
+                                <div role="tabpanel" class="tab-pane fade" id="reviews" aria-labelledby="reviews-tab">
+                                    <!-- table of user comments -->
+                                    <div class="row" ng-repeat="comment in comments">
+                                        <div class="col-sm-1">
+                                            <div class="thumbnail">
+
+                                                <img class="img-responsive user-photo"
+                                                     ng-if="comment.visitorName != undefined"
+                                                     src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
+
+                                                <img class="img-responsive user-photo"
+                                                     ng-if="comment.visitorName === undefined"
+                                                     src="{{comment.user.profile.picture}}">
+
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-10">
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">
+                                                    <strong ng-if="comment.visitorName != undefined">{{comment.visitorName}}</strong>
+                                                    <span ng-if="comment.visitorName != undefined" class="text-muted">{{comment.date | date:'yyyy-MM-dd'}}</span>
+
+                                                    <strong ng-if="comment.visitorName === undefined">{{comment.user.profile.name}}
+                                                    </strong> <span ng-if="comment.visitorName === undefined"
+                                                                    class="text-muted">{{comment.date | date:'yyyy-MM-dd'}}</span>
+
+                                                </div>
+                                                <div class="panel-body">
+                                                    {{comment.comment}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="descr">
+                                        <div class="reviews-bottom">
+                                            <h4>أضف تقييم أو تعليق</h4>
+                                            <br/>
+                                            <div class="block">
+                                                <div class="starbox small ghosting">
+                                                    <div class="positioner">
+                                                        <div class="stars">
+                                                            <div class="ghost"
+                                                                 style="width: 42.5px; display: none;"></div>
+                                                            <div class="colorbar" style="width: 42.5px;"></div>
+                                                            <div class="star_holder">
+                                                                <div class="star star-0"></div>
+                                                                <div class="star star-1"></div>
+                                                                <div class="star star-2"></div>
+                                                                <div class="star star-3"></div>
+                                                                <div class="star star-4"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <form name="commentForm">
+                                                <input type="hidden" name="productId" value="<%= product._id %>"/>
+                                                <label>الرسالة </label>
+                                                <textarea type="text" required
+                                                          Name="userComment" ng-model="userComment"
+                                                >الرسالة</textarea>
+
+                                                <span style="color:red"
+                                                      ng-show="commentForm.userComment.$dirty && commentForm.userComment.$invalid">
+<span ng-show="commentForm.userComment.$error.required">يرجي ادخال التعليق</span>
+</span>
+
+                                                <% if(!user) { %>
+                                                <div class="row">
+                                                    <div class="col-md-6 row-grid">
+                                                        <label>الاسم</label>
+                                                        <input type="text"
+                                                               value="الاسم" required
+                                                               Name="visitorName" ng-model="visitorName"
+                                                               onfocus="this.value = '';"
+                                                        >
+                                                        <span style="color:red"
+                                                              ng-show="commentForm.visitorName.$dirty && commentForm.visitorName.$invalid">
+<span ng-show="commentForm.visitorName.$error.required">يرجي ادخال الاسم</span>
+</span>
+                                                    </div>
+                                                    <div class="col-md-6 row-grid">
+                                                        <label>الايميل</label>
+                                                        <input type="email" required
+                                                               value="الايميل"
+                                                               Name="visitorEmail" ng-model="visitorEmail"
+                                                               onfocus="this.value = '';"
+                                                        >
+                                                        <span style="color:red"
+                                                              ng-show="commentForm.visitorEmail.$dirty && commentForm.visitorEmail.$invalid">
+                                                            <span ng-show="commentForm.visitorEmail.$error.required">يرجي ادخال البريد الالكتروني</span>
+                                                   <span ng-show="commentForm.visitorEmail.$error.email">البريد الالكتروني غير صالح</span>
+                                                             </span>
+                                                    </div>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                                <% } else { %>
+                                                <input type="hidden" name="userId" value="<%= user._id %>">
+                                                <% } %>
+
+                                                <% if(user) { %>
+                                                <input type="button" style="margin-top: 10px" id="btnsaveComment"
+                                                       ng-disabled="commentForm.userComment.$dirty && commentForm.userComment.$invalid"
+                                                       ng-click="saveComment()" class="btn btn-success"
+                                                       value="ارسال">
+                                                <% } else { %>
+                                                <input type="button" id="btnsaveComment" style="margin-top: 10px"
+ng-disabled="commentForm.userComment.$dirty && commentForm.userComment.$invalid || commentForm.visitorName.$dirty && commentForm.visitorName.$invalid || commentForm.visitorEmail.$dirty && commentForm.visitorEmail.$invalid"
+                                                       ng-click="saveComment()"
+                                                       class="btn btn-success"
+                                                       value="ارسال">
+                                                <% } %>
+
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <!--Product Description-->
+    </div>
+</div>
+<!--single-->

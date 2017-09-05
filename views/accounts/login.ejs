@@ -1,0 +1,93 @@
+<% layout('layoutAccounts') %>
+
+<title>تسجيل الدخول</title>
+
+<style>
+    html,body {
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        bottom:0;
+        margin: auto;
+        background-image: url("../../public/media/login-bk.jpg");
+        overflow: auto;
+        background-repeat: no-repeat;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    /*body {*/
+        /*background-image: url('../../public/media/login-bk.jpg');*/
+        /*background-repeat: no-repeat;*/
+        /*background-position: center;*/
+        /*-webkit-background-size: cover;*/
+        /*-moz-background-size: cover;*/
+        /*-o-background-size: cover;*/
+        /*background-size: cover;*/
+        /*height:100%;*/
+    /*}*/
+
+    /*.footer {*/
+        /*position: absolute;*/
+        /*right: 0;*/
+        /*bottom: 0;*/
+        /*left: 0;*/
+    /*}*/
+
+</style>
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-lg-6 col-md-offset-3">
+
+            <div id="messages">
+                <% Object.keys(messages).forEach(function (type) { %>
+                <ul class="<%= type %>">
+                    <% messages[type].forEach(function (message) { %>
+                    <li><%= message %></li>
+                    <% }) %>
+                </ul>
+                <% }) %>
+            </div>
+
+            <form method="post">
+
+                <h1> تسجيل الدخول </h1>
+                <div class="form-group">
+                    <label for="name">الايميل: </label>
+                    <input type="email" class="form-control" name="email" placeholder="الايميل">
+                </div>
+                <div class="form-group">
+                    <label for="name">الرقم السري: </label>
+                    <input type="password" class="form-control" name="password" placeholder="الرقم السري">
+                </div>
+
+                <div class="row justify-content-md-center">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-8">
+
+                        <button type="submit" class="btn btn-success btn-block">
+                            <i class="fa fa-sign-in"></i>
+                            تسجيل دخول
+                        </button>
+
+                        <a class="btn btn-block btn-social btn-facebook " href="/auth/facebook">
+                            <i class="fa fa-facebook"></i> تسجيل دخول باستخدام فيس بوك
+                        </a>
+
+                        <a class="btn btn-block btn-social btn-twitter " href="/auth/twitter">
+                            <i class="fa fa-twitter"></i> تسجيل دخول باستخدام تويتر
+                        </a>
+
+                    </div>
+                    <div class="col-sm-2"></div>
+                </div>
+
+
+            </form>
+        </div>
+    </div>
+</div>

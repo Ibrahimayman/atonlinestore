@@ -1,0 +1,130 @@
+<% layout('boilerplate') %>
+<title>الحساب الخاص بك</title>
+<div class="container" ng-controller="saveProfileCtrl">
+    <br/><br/>
+    <div class="row">
+        <form action="/profile" method="post">
+            <div class="col-sm-6 col-md-4">
+                <img class="img-circle img-responsive img-center" src="<%= user.profile.picture %>" alt="">
+
+                <br/>
+                <p>الايميل: <%= user.email %></p>
+
+                <br>
+                <input type="submit" class="btn btn-success btn-lg" value="حفظ التعديلات">
+            </div>
+
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="address">عنوان الشحن : </label>
+                    <% if (user.address === "" || typeof user.address === 'undefined')  { %>
+                    <textarea rows="5" class="form-control" name="address" placeholder="عنوان الشحن">لم يتم تحديد عنوان الشحن</textarea>
+                    <% } else { %>
+                    <textarea rows="5" class="form-control" name="address"
+                              placeholder="عنوان الشحن"><%= user.address %></textarea>
+                    <% } %>
+                </div>
+
+                <div class="form-group">
+                    <label for="name">الاسم : </label>
+                    <input type="text" value="<%= user.profile.name %>" class="form-control" name="name"
+                           placeholder="الاسم"/>
+                </div>
+
+                <div class="form-group">
+                    <label for="mobile">رقم الهاتف : </label>
+                    <% if (user.profile.mobile === "" || typeof user.profile.mobile === 'undefined')  { %>
+                    <input type="text" class="form-control" name="mobile" placeholder="رقم الهاتف"/>
+                    <% } else { %>
+                    <input type="text" class="form-control" value="<%= user.profile.mobile %>" name="mobile"
+                           placeholder="رقم الهاتف"/>
+                    <% } %>
+                </div>
+
+                <div class="form-group">
+                    <label for="sex"> الجنس : </label>
+                    <% if (user.profile.sex === "" || typeof user.profile.sex === 'undefined')  { %>
+                    <select class="form-control" name="sex">
+                        <option value="ذكر">ذكر</option>
+                        <option value="انثي">انثي</option>
+                    </select>
+                    <% } else { %>
+                    <select class="form-control" name="sex">
+                        <option value="ذكر" <% if (user.profile.sex == 'ذكر') { %>selected<% } %> >ذكر</option>
+                        <option value="انثي" <% if (user.profile.sex == 'انثي') { %>selected<% } %> >انثي</option>
+                    </select>
+                    <% } %>
+                </div>
+
+                <div class="form-group">
+                    <label for="mobile">تاريخ الميلاد : </label>
+                    <div class="row">
+                        <div class="col-sm-4">
+
+                            <div class="form-group">
+                                <label for="day">اليوم : </label>
+                                <select class="form-control" name="day" id="day">
+                                    <% for(var day = 1;  day < 32 ; day++) { %>
+                                    <option value="<%= day %> "> <%= day %> </option>
+                                    <% } %>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label for="month">الشهر : </label>
+                                <select class="form-control" name="month">
+                                    <% for(var month = 1;  month < 13 ; month++) { %>
+                                    <option value="<%= month %>"> <%= month %> </option>
+                                    <% } %>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label for="year">السنة : </label>
+                                <select class="form-control" name="year">
+                                    <% for(var year = 1970;  year < 2010 ; year++) { %>
+                                    <option value="<%= year %> "> <%= year %> </option>
+                                    <% } %>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </form>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6 col-md-4">
+
+        </div>
+
+        <div class="col-sm-6">
+            <h2 class="text-center">مشترياتك</h2>
+            <table class="table table-bordered sticky-header">
+                <thead>
+                <tr>
+                    <th>اسم المنتج</th>
+                    <th>السعر</th>
+                </tr>
+                </thead>
+                <tbody>
+                <% for(var i = 0; i < user.history.length; i++) { %>
+                <tr>
+                    <td> <%= user.history[i].item.name %> </td>
+                    <td> <%= user.history[i].paid %> </td>
+                </tr>
+                <% } %>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,108 @@
+<% layout('layoutAdmin') %>
+
+<div class="container" ng-controller="categoryCtrl">
+    <div class="row">
+        <div class="col-lg-6">
+
+            <div id="messages">
+                <% Object.keys(messages).forEach(function (type) { %>
+                <ul class="<%= type %>">
+                    <% messages[type].forEach(function (message) { %>
+                    <li><%= message.msg %></li>
+                    <% }) %>
+                </ul>
+                <% }) %>
+            </div>
+
+            <form method="post" action="/admin/add-category">
+                <div class="form-group">
+                    <label for="name">اسم القسم: </label>
+                    <input type="text" class="form-control" name="name" placeholder="اسم القسم">
+                </div>
+
+                <button type="submit" class="btn btn-success">اضافة</button>
+
+            </form>
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="col-lg-12">
+            <table class="table table-bordered table-hover datatable">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>اسم القسم</th>
+                    <th>عدد المنتجات</th>
+                    <th>العمليات</th>
+                </tr>
+                </thead>
+                <tbody>
+                <% for(var i = 0; i < CategoriesList.length ; i++) { %>
+                <tr>
+                    <td> <%= (i) + 1 %> </td>
+                    <td> <%= CategoriesList[i].name %> </td>
+                    <td>25</td>
+                    <td>
+                        <a href="javascript:void(0)"
+                           ng-click="showEditModal('<%= CategoriesList[i]._id %>')"
+                           title="تعديل قسم"><i class="fa fa-edit"></i></a>
+                        <a href="javascript:void(0)"
+                           ng-click="showRemoveModal('<%= CategoriesList[i]._id %>')"
+                           title="حذف قسم">
+                            <i class="fa fa-trash"></i>
+                        </a>
+                    </td>
+                </tr>
+                <% } %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="modal fade" id="RemoveModal" tabindex="-1" role="dialog" aria-labelledby="RemoveModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">حذف قسم</h4>
+                </div>
+                <div class="modal-body">
+                    هل تريد حذف هذا القسم ؟
+                </div>
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" ng-click="DeleteCategory()" class="btn btn-danger">حذف</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="EditModal" tabindex="-1" role="dialog" aria-labelledby="RemoveModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">تعديل قسم</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-group">
+                        <label for="name">اسم القسم: </label>
+                        <input type="text" id="txtCatName" class="form-control" name="name">
+                    </form>
+                </div>
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" ng-click="EditCategory()" class="btn btn-danger">حفظ</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

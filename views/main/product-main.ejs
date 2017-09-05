@@ -1,0 +1,198 @@
+<% layout('boilerplate') %>
+<title>أتميدة أون لاين ستور | ملابس</title>
+<div class="content">
+    <!--banner-bottom-->
+    <div class="ban-bottom-w3l">
+        <div class="container">
+            <div class="col-md-6 ban-bottom">
+                <div class="ban-top">
+                    <img src="../../public/images/p1.jpg" class="img-responsive" alt=""/>
+                    <div class="ban-text">
+                        <h4>ملابس أطفال</h4>
+                    </div>
+                    <div class="ban-text2 hvr-sweep-to-top">
+                        <h4>50% <span>Off/-</span></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 ban-bottom3">
+                <div class="ban-top">
+                    <img src="../../public/images/p2.jpg" class="img-responsive" alt=""/>
+                    <div class="ban-text1">
+                        <h4>ملابس أطفال بنات</h4>
+                    </div>
+                </div>
+                <div class="ban-img">
+                    <div class=" ban-bottom1">
+                        <div class="ban-top">
+                            <img src="../../public/images/p3.jpg" class="img-responsive" alt=""/>
+                            <div class="ban-text1">
+                                <h4>تيشرتات</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ban-bottom2">
+                        <div class="ban-top">
+                            <img src="../../public/images/p4.jpg" class="img-responsive" alt=""/>
+                            <div class="ban-text1">
+                                <h4>شنط</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <!--banner-bottom-->
+
+    <!--new-arrivals-->
+    <div class="new-arrivals-w3agile">
+        <div class="container">
+            <h2 class="tittle">منتجات وصلت حديثا</h2>
+            <div class="arrivals-grids">
+                <% for (var i = 0; i < newArrivals.length; i++) { %>
+                <div class="col-md-3 arrival-grid simpleCart_shelfItem">
+                    <div class="grid-arr">
+                        <div class="grid-arrival">
+                            <figure>
+                                <a href="/product/<%= newArrivals[i]._id %>" class="new-gri" data-toggle="modal" data-target="#myModal1">
+                                    <div class="grid-img">
+                                        <img src="/public/uploads/<%= newArrivals[i].image[0].name %>" class="img-responsive"
+                                             alt="">
+                                    </div>
+                                    <div class="grid-img">
+                                        <img src="/public/uploads/<%= newArrivals[i].image[1].name %>" class="img-responsive"
+                                             alt="">
+                                    </div>
+                                </a>
+                            </figure>
+                        </div>
+                        <% for (var j = 0; j < newArrivals[i].Status.length; j++) { %>
+
+                        <% if(newArrivals[i].Status[j] === "new"){ %>
+                        <div class="ribben">
+                            <p>NEW</p>
+                        </div>
+                        <% } %>
+
+                        <% if(newArrivals[i].Status[j] === "sale"){ %>
+                        <div class="ribben1">
+                            <p>SALE</p>
+                        </div>
+                        <% } %>
+
+                        <% if(newArrivals[i].Status[j] === "out of stock"){ %>
+                        <div class="ribben2">
+                            <p>OUT OF STOCK</p>
+                        </div>
+                        <% } %>
+                        <% } %>
+                        <div class="block">
+                            <div class="starbox small ghosting"></div>
+                        </div>
+                        <div class="women">
+                            <h6><a href="/product/<%= newArrivals[i]._id %>"><%= newArrivals[i].name %></a></h6>
+                            <p>
+                                <% for (var j = 0; j < newArrivals[i].Status.length; j++) { %>
+                                <% if(newArrivals[i].Status[j] === "sale"){ %>
+                                <del> <%= newArrivals[i].price - newArrivals[i].priceAfterOffer %>  </del>
+                                <% } %>
+                                <% } %>
+                                <em class="item_price"> <%= newArrivals[i].price %> ج . م </em></p>
+
+                            <a href="/product/<%= newArrivals[i]._id %>"
+                               data-text="Add To Cart" class="my-cart-b item_add">شراء</a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <% } %>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <!--new-arrivals-->
+
+    <div class="latest-w3">
+        <div class="container">
+            <h3 class="tittle1">أحدث اتجاهات الموضة</h3>
+            <div class="latest-grids">
+                <div class="col-md-4 latest-grid">
+                    <div class="latest-top">
+                        <img src="../../public/images/l1.jpg" class="img-responsive" alt="">
+                        <div class="latest-text">
+                            <h4>Men</h4>
+                        </div>
+                        <div class="latest-text2 hvr-sweep-to-top">
+                            <h4>-50%</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 latest-grid">
+                    <div class="latest-top">
+                        <img src="../../public/images/l2.jpg" class="img-responsive" alt="">
+                        <div class="latest-text">
+                            <h4>Shoes</h4>
+                        </div>
+                        <div class="latest-text2 hvr-sweep-to-top">
+                            <h4>-20%</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 latest-grid">
+                    <div class="latest-top">
+                        <img src="../../public/images/l3.jpg" class="img-responsive" alt="">
+                        <div class="latest-text">
+                            <h4>Women</h4>
+                        </div>
+                        <div class="latest-text2 hvr-sweep-to-top">
+                            <h4>-50%</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="latest-grids">
+                <div class="col-md-4 latest-grid">
+                    <div class="latest-top">
+                        <img src="../../public/images/l4.jpg" class="img-responsive" alt="">
+                        <div class="latest-text">
+                            <h4>Watch</h4>
+                        </div>
+                        <div class="latest-text2 hvr-sweep-to-top">
+                            <h4>-45%</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 latest-grid">
+                    <div class="latest-top">
+                        <img src="../../public/images/l5.jpg" class="img-responsive" alt="">
+                        <div class="latest-text">
+                            <h4>Bag</h4>
+                        </div>
+                        <div class="latest-text2 hvr-sweep-to-top">
+                            <h4>-10%</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 latest-grid">
+                    <div class="latest-top">
+                        <img src="../../public/images/l6.jpg" class="img-responsive" alt="">
+                        <div class="latest-text">
+                            <h4>Cameras</h4>
+                        </div>
+                        <div class="latest-text2 hvr-sweep-to-top">
+                            <h4>-30%</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+
+
+</div>

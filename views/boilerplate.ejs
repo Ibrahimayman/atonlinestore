@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="ibrahim Ayman">
+    <!--<link rel="stylesheet" href="../public/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="../public/css/bootstrap_ar.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css">
+    <link rel="stylesheet" href="../public/css/animate.css">
+
+    <link rel="stylesheet" href="../public/css/coreSlider.css">
+    <link rel="stylesheet" href="../public/css/flexslider.css">
+    <link rel="stylesheet" href="../public/css/jquery-ui.css">
+    <link rel="stylesheet" href="../public/css/jstarbox.css">
+    <link rel="stylesheet" href="../public/css/owl.carousel.css">
+
+    <link rel="stylesheet" href="../public/css/style.css">
+
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials.css" />
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials-theme-classic.css" />
+
+    <link href="//cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/2.1.0/toaster.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../public/css/custom.css">
+    <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
+</head>
+
+<body>
+<% include ./partials/navbar.ejs %>
+<toaster-container
+        toaster-options="{'close-button':false, 'time-out':{ 'toast-warning': 10, 'toast-error': 0 } }">
+</toaster-container>
+<%- body %>
+
+<% include ./partials/footer.ejs %>
+
+<script>
+    window.Tether = {};
+</script>
+
+<script src="../public/js/jquery-1.10.2.min.js"></script>
+<!--<script src="../public/js/bootstrap.js"></script>-->
+<script src="../public/js/bootstrap-arabic.js"></script>
+<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+<script src="../public/js/spin.min.js"></script>
+<script src="../public/js/wow.min.js"></script>
+<script src="../public/js/jquery.nicescroll.min.js"></script>
+
+<script src="../public/js/coreSlider.js"></script>
+<script src="../public/js/imagezoom.js"></script>
+<script src="../public/js/jquery.flexslider.js"></script>
+<script src="../public/js/jquery.jscrollpane.min.js"></script>
+<script src="../public/js/jquery.mousewheel.js"></script>
+<script src="../public/js/jquery.mycart.js"></script>
+<script src="../public/js/jquery-ui.js"></script>
+<script src="../public/js/jstarbox.js"></script>
+<script src="../public/js/owl.carousel.js"></script>
+<script src="../public/js/simpleCart.min.js"></script>
+<script src="../public/js/main.js"></script>
+<script src="../public/js/responsiveslides.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials.min.js"></script>
+
+<script src="../public/js/angular.js"></script>
+<!--<script src="http://code.angularjs.org/1.4.2/angular-animate.min.js"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/2.1.0/toaster.js"></script>
+
+
+<script src="../public/myApp/mainModule.js"></script>
+<script src="../public/myApp/subscribers/service.js"></script>
+<script src="../public/myApp/subscribers/controller.js"></script>
+<script src="../public/myApp/cart/controller.js"></script>
+<script src="../public/myApp/profile/controller.js"></script>
+<script src="../public/myApp/productComments/controller.js"></script>
+
+<script src="../public/js/custome.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<% layout('boilerplate') %>
+
+<!--new-arrivals-->
+<div class="new-arrivals-w3agile">
+    <div class="container">
+        <h2 class="tittle"></h2>
+        <div class="arrivals-grids">
+            <% for (var i = 0; i < products.length; i++) { %>
+
+            <div class="col-md-3 arrival-grid simpleCart_shelfItem">
+                <div class="grid-arr">
+                    <div class="grid-arrival">
+                        <figure>
+                            <a href="/product/<%= products[i]._id %>" class="new-gri" data-toggle="modal"
+                               data-target="#myModal1">
+                                <div class="grid-img">
+                                    <img src="/public/uploads/<%= products[i].image[0].name %>" class="img-responsive"
+                                         alt="">
+                                </div>
+                                <div class="grid-img">
+                                    <img src="/public/uploads/<%= products[i].image[1].name %>" class="img-responsive"
+                                         alt="">
+                                </div>
+                            </a>
+                        </figure>
+                    </div>
+
+                    <% for (var j = 0; j < products[i].Status.length; j++) { %>
+
+                    <% if(products[i].Status[j] === "new"){ %>
+                    <div class="ribben">
+                        <p>NEW</p>
+                    </div>
+                    <% } %>
+
+                    <% if(products[i].Status[j] === "sale"){ %>
+                    <div class="ribben1">
+                        <p>SALE</p>
+                    </div>
+                    <% } %>
+
+                    <% if(products[i].Status[j] === "out of stock"){ %>
+                    <div class="ribben2">
+                        <p>OUT OF STOCK</p>
+                    </div>
+                    <% } %>
+                    <% } %>
+                    <div class="block">
+                        <div class="starbox small ghosting"></div>
+                    </div>
+                    <div class="women">
+                        <h6><a href="/product/<%= products[i]._id %>"><%= products[i].name %></a></h6>
+                        <p>
+                            <% for (var j = 0; j < products[i].Status.length; j++) { %>
+                            <% if(products[i].Status[j] === "sale"){ %>
+                            <del> <%= products[i].price - products[i].priceAfterOffer %>  </del>
+                            <% } %>
+                            <% } %>
+                            <em class="item_price"> <%= products[i].price %> ج . م </em></p>
+
+                        <a href="/product/<%= products[i]._id %>"
+                           data-text="Add To Cart" class="my-cart-b item_add">شراء</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <% } %>
+            <div class="clearfix"></div>
+        </div>
+
+
+        <ul class="pagination text-center">
+            <li>
+                <% for(var i = 1; i <= pages; i++) { %>
+                <% if (i === 1)  { %>
+            <li>
+                <a href="/products/<%= categoryId %>">
+                    <%= i %>
+                </a>
+            </li>
+            <% } else { %>
+            <li>
+                <a href="/products/<%= categoryId %>/<%= i %>">
+                    <%= i %>
+                </a>
+            </li>
+            <% } %>
+
+            <% } %>
+
+            </li>
+
+        </ul>
+
+    </div>
+</div>
+<!--new-arrivals-->
