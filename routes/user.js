@@ -88,7 +88,6 @@ router.post('/profile', passportConf.isAuthenticated, function (req, res, next) 
     });
 });
 
-
 router.post('/signup', function (req, res, next) {
     async.waterfall([
         function (callback) {

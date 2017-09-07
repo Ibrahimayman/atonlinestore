@@ -13,5 +13,20 @@ module.exports = {
         consumerSecret: process.env.TWITTER_SECRET || 'ht254juKPXzUtteXFDI849DZQ1GUQwmyeiRmptKT9eC3uV6wnk',
         profileFields: ['emails', 'displayName'],
         callbackURL: 'http://localhost:3000/auth/twitter/callback/'
+    },
+    companyName: 'أتميدة أون لاين ستور',
+    projectName: 'أتميدة أون لاين ستور',
+    systemEmail: 'atonlinestore079@gmail.com',
+    smtp: {
+        from: {
+            name: process.env.SMTP_FROM_NAME || exports.projectName + ' أتميدة أون لاين ستور',
+            address: process.env.SMTP_FROM_ADDRESS || 'atonlinestore079@gmail.com'
+        },
+        credentials: {
+            user: process.env.SMTP_USERNAME || 'atonlinestore079@gmail.com',
+            password: process.env.SMTP_PASSWORD || 'Abcd@123321',
+            host: process.env.SMTP_HOST || 'smtp.gmail.com',
+            ssl: true
+        }
     }
 };

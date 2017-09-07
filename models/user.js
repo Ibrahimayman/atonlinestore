@@ -5,8 +5,9 @@
 var mongoose = require("mongoose"),
     bcrypt = require("bcryptjs"),
     crypto = require("crypto"),
-    passwordHash = require('password-hash');
-Schema = mongoose.Schema;
+    passwordHash = require('password-hash'),
+    Schema = mongoose.Schema,
+    config = require("../config/secret");
 
 /*------------ the user schema attributes / characteristics / fields  ------------*/
 
@@ -23,9 +24,9 @@ var UserSchema = new Schema({
     profile: {
         name: {type: String, default: ''},
         picture: {type: String, default: ''},
-        mobile : {type : String},
-        sex : {type : String},
-        dateOfBirth : {type : Date}
+        mobile: {type: String},
+        sex: {type: String},
+        dateOfBirth: {type: Date}
     },
     address: {type: String},
     history: [{
@@ -87,6 +88,22 @@ UserSchema.methods.gravatar = function (size) {
     if (!this.email) return 'https://gravatar.com/avatar/?s' + size + '&d=retro';
     var md5 = crypto.createHash('md5').update(this.email).digest('hex');
     return 'https://gravatar.com/avatar/' + md5 + '?s=' + size + '&d=retro';
+};
+
+UserSchema.methods.sendRegistrationEmail = function (req, res, options) {
+    req.app.utility.sendmail(req, res, {
+        from: config.smtp.from.name + ' <' + config.smtp.from.address + '>',
+        to: options.email,
+        subject: config.projectName + ' شكرا لتسجيلك فى ',
+        textPath: '../views/accounts/email-text',
+        htmlPath: '../views/accounts/email-html',
+        success: function () {
+            options.onSuccess();
+        },
+        error: function (err) {
+            options.onError(err);
+        }
+    });
 };
 
 module.exports = mongoose.model("User", UserSchema);

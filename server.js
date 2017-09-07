@@ -25,6 +25,7 @@ var cartLentgh = require("./middlewares/middlewares");
 
 
 var app = express();
+app.config = secret;
 app.use("/public", express.static(path.join(__dirname, 'public')));
 app.use(morgan("dev"));  // middleware used to log when you made an http verb. used to log any res or req.
 app.use(bodyParser.json());
@@ -107,7 +108,7 @@ function ensureAdmin(req, res, next) {
     res.redirect('/');
 }
 
-app.param('id', function(request, response, next, id){
+app.param('id', function (request, response, next, id) {
     // Do something with id
     // Store id or other info in req object
     // Call next when done
@@ -149,7 +150,7 @@ app.all('/admin*', billRoutes, ensureAdmin);
 app.use('/admin', billRoutes, ensureAdmin);
 
 
-app.listen(process.env.PORT || 3000, function(){
+app.listen(process.env.PORT || 3000, function () {
     console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });
 
