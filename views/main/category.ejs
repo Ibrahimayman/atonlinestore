@@ -55,10 +55,10 @@
                             <% if(products[i].Status[j] === "sale"){ %>
                             <del> <%= products[i].buyingPrice - products[i].priceAfterOffer %>  </del>
                             <em class="item_price"> <%= products[i].priceAfterOffer %> ج . م </em></p>
-                        <% } else{ %>
-                        <em class="item_price"> <%= products[i].buyingPrice %> ج . م </em></p>
-                        <% } %>
-                        <% } %>
+                            <% } else{ %>
+                            <em class="item_price"> <%= products[i].buyingPrice %> ج . م </em></p>
+                            <% } %>
+                            <% } %>
 
                         <a href="/product/<%= products[i]._id %>"
                            data-text="Add To Cart" class="my-cart-b item_add">شراء</a>

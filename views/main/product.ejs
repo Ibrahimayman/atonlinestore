@@ -136,6 +136,8 @@
             </div>
             <div class="clearfix"></div>
         </div>
+
+
         <!--Product Description-->
         <div class="product-w3agile">
             <h3 class="tittle1">تفاصيل المنتج</h3>
@@ -251,7 +253,7 @@
                             </div>
                         </div>
                     </div>
-                    <img class="img-responsive " src="images/woo2.jpg" alt="">
+                    <img class="img-responsive " src="../../public/images/woo2.jpg" alt="عرض من أتميدة أون لاين ستور">
                 </div>
                 <div class="col-md-8 product-grid1">
                     <div class="tab-wl3">
@@ -269,21 +271,16 @@
                                      aria-labelledby="home-tab">
                                     <div class="descr">
                                         <h4><%= product.name %> </h4>
-
                                         <div class="video">
-
                                             <iframe id="my-player" controls
                                                     class="video-js"
                                                     src="<%= product.videoSrc %>"
                                                     frameborder="0" allowfullscreen>
                                             </iframe>
-
                                         </div>
-
                                         <p>
                                             <%= product.description %>
                                         </p>
-
                                     </div>
                                 </div>
                                 <div role="tabpanel" class="tab-pane fade" id="reviews" aria-labelledby="reviews-tab">
@@ -293,12 +290,7 @@
                                             <div class="thumbnail">
 
                                                 <img class="img-responsive user-photo"
-                                                     ng-if="comment.visitorName != undefined"
                                                      src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
-
-                                                <img class="img-responsive user-photo"
-                                                     ng-if="comment.visitorName === undefined"
-                                                     src="{{comment.user.profile.picture}}">
 
                                             </div>
                                         </div>
@@ -353,7 +345,6 @@
                                                       ng-show="commentForm.userComment.$dirty && commentForm.userComment.$invalid">
 <span ng-show="commentForm.userComment.$error.required">يرجي ادخال التعليق</span>
 </span>
-
                                                 <% if(!user) { %>
                                                 <div class="row">
                                                     <div class="col-md-6 row-grid">
@@ -412,6 +403,7 @@
             </div>
         </div>
         <!--Product Description-->
+
     </div>
 </div>
 <!--single-->

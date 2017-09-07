@@ -10,7 +10,7 @@ var stripe = require("stripe")('sk_test_90yMCyP0kAVCmeJSs22PDx2m');
 
 
 function Paginate(req, res, next) {
-    var perPage = 60;
+    var perPage = 100;
     var page = req.param('page');
     Product
         .find({category: req.params.id})
@@ -25,7 +25,6 @@ function Paginate(req, res, next) {
             });
         });
 }
-
 
 Product.createMapping(function (err, mapping) {
     if (err) {

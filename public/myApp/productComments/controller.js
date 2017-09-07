@@ -25,7 +25,6 @@ app.controller("commentsCtrl", function ($scope, $http, $timeout, toaster) {
     };
 
     function getComments() {
-        debugger;
         var url = window.location.pathname;
         var id = url.substring(url.lastIndexOf('/') + 1);
         $http.get('/api/product/comments/' + id)
@@ -37,7 +36,6 @@ app.controller("commentsCtrl", function ($scope, $http, $timeout, toaster) {
                 console.log('Error: ' + data);
             });
     }
-
 });
 
 

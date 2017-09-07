@@ -1,6 +1,8 @@
 var router = require("express").Router(),
     ProductComments = require("../models/productComments");
 
+
+const {MongoClient, ObjectID} = require("mongodb");
 /* visitors and users comments on the product */
 router.post('/api/product/saveComment', function (req, res, next) {
     var ProductComment = new ProductComments({
@@ -18,7 +20,7 @@ router.post('/api/product/saveComment', function (req, res, next) {
 
 /* get all comments for specific product */
 router.get('/api/product/comments/:id', function (req, res, next) {
-    ProductComments.find({product: req.params.id}).populate("user").exec(function (err, comments) {
+    ProductComments.find({product: ObjectID(req.params.id)}).populate("user").exec(function (err, comments) {
         if (err) return next(err);
         res.send(comments);
     })

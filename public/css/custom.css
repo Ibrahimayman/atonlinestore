@@ -512,7 +512,9 @@ ul.error li {
 .has-error {
 
 }
-
+.nav-tabs {
+     margin-bottom: 0px;
+}
 /*.footer {*/
 /*position:static;*/
 /*left:0px;*/

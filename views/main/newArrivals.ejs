@@ -14,11 +14,13 @@
                             <a href="/product/<%= newArrivals[i]._id %>" class="new-gri" data-toggle="modal"
                                data-target="#myModal1">
                                 <div class="grid-img">
-                                    <img src="/public/uploads/<%= newArrivals[i].image[0].name %>" class="img-responsive"
+                                    <img src="/public/uploads/<%= newArrivals[i].image[0].name %>"
+                                         class="img-responsive"
                                          alt="">
                                 </div>
                                 <div class="grid-img">
-                                    <img src="/public/uploads/<%= newArrivals[i].image[1].name %>" class="img-responsive"
+                                    <img src="/public/uploads/<%= newArrivals[i].image[1].name %>"
+                                         class="img-responsive"
                                          alt="">
                                 </div>
                             </a>
@@ -53,13 +55,14 @@
                         <p>
                             <% for (var j = 0; j < newArrivals[i].Status.length; j++) { %>
                             <% if(newArrivals[i].Status[j] === "sale"){ %>
-                            <del> <%= newArrivals[i].price - newArrivals[i].priceAfterOffer %>  </del>
+                            <del> <%= newArrivals[i].buyingPrice - newArrivals[i].priceAfterOffer %>  </del>
+                            <% }else { %>
+                            <em class="item_price"> <%= newArrivals[i].buyingPrice %> ج . م </em></p>
                             <% } %>
                             <% } %>
-                            <em class="item_price"> <%= newArrivals[i].price %> ج . م </em></p>
 
-                        <a href="/product/<%= newArrivals[i]._id %>"
-                           data-text="Add To Cart" class="my-cart-b item_add">شراء</a>
+                            <a href="/product/<%= newArrivals[i]._id %>"
+                               data-text="Add To Cart" class="my-cart-b item_add">شراء</a>
                     </div>
                 </div>
             </div>
