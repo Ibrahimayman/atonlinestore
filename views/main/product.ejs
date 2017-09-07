@@ -27,13 +27,23 @@
                         <div class="block">
                             <div class="starbox small ghosting"></div>
                         </div>
+
+                        <% for (var j = 0; j < product.Status.length; j++) { %>
+                        <% if(product.Status[j] === "sale"){ %>
+                        <p class="price item_price"> <%= product.priceAfterOffer %>
+                            ج.م </p>
+                        <% } else { %>
                         <p class="price item_price"><%= product.buyingPrice %> ج.م </p>
+                        <% } %>
+                        <% } %>
+
                         <!--<div class="description">-->
                         <!--<p><span>مراجهة سريعة : </span> In cursus faucibus tortor eu vestibulum. Ut eget turpis ac-->
                         <!--justo porta varius. Donec vel felis ante, ac vehicula ipsum. Quisque sed diam metus.-->
                         <!--Quisque eget leo sit amet erat varius rutrum vitae dapibus lectus. Vivamus et sapien-->
                         <!--ante. Suspendisse potenti. Fusce in tellus est, ac consequat.</p>-->
                         <!--</div>-->
+
                         <form method="post" action="/product/:product_id">
                             <div class="color-quality">
                                 <h6>الكمية :</h6>
@@ -48,10 +58,27 @@
                             </div>
                             <div class="women">
                                 <input type="hidden" name="product_id" id="product_id" value="<%= product._id %>"/>
-                                <input type="hidden" name="priceHidden" id="priceHidden" value="<%= product.buyingPrice %>"/>
+                                <% for (var j = 0; j < product.Status.length; j++) { %>
+                                <% if(product.Status[j] === "sale"){ %>
+                                <input type="hidden" name="priceHidden" id="priceHidden"
+                                       value="<%= product.priceAfterOffer %>"/>
+                                <% } else { %>
+                                <input type="hidden" name="priceHidden" id="priceHidden"
+                                       value="<%= product.buyingPrice %>"/>
+                                <% } %>
+                                <% } %>
+
                                 <input type="hidden" name="item" class="form-control" value="<%= product.name %>"/>
+
+                                <% for (var j = 0; j < product.Status.length; j++) { %>
+                                <% if(product.Status[j] === "sale"){ %>
+                                <input type="text" name="priceValue" id="priceValue" class="form-control"
+                                       value="<%= product.priceAfterOffer %>"/>
+                                <% } else { %>
                                 <input type="text" name="priceValue" id="priceValue" class="form-control"
                                        value="<%= product.buyingPrice %>"/>
+                                <% } %>
+                                <% } %>
 
                                 <br/>
                                 <% if (user) { %>
@@ -92,7 +119,16 @@
                         <div class="block">
                             <div class="starbox small ghosting"></div>
                         </div>
+
+                        <% for (var j = 0; j < SimilarProducts[i].Status.length; j++) { %>
+                        <% if(SimilarProducts[i].Status[j] === "sale"){ %>
+                        <span class=" price-in1"> <%= SimilarProducts[i].priceAfterOffer %>
+                            ج . م  </span>
+                        <% } else { %>
                         <span class=" price-in1"> <%= SimilarProducts[i].buyingPrice %> ج . م  </span>
+                        <% } %>
+                        <% } %>
+
                     </div>
                     <div class="clearfix"></div>
                 </div>
@@ -236,11 +272,11 @@
 
                                         <div class="video">
 
-                                        <iframe id="my-player" controls
-                                                class="video-js"
-                                                src="<%= product.videoSrc %>"
-                                                frameborder="0" allowfullscreen>
-                                        </iframe>
+                                            <iframe id="my-player" controls
+                                                    class="video-js"
+                                                    src="<%= product.videoSrc %>"
+                                                    frameborder="0" allowfullscreen>
+                                            </iframe>
 
                                         </div>
 
@@ -358,7 +394,7 @@
                                                        value="ارسال">
                                                 <% } else { %>
                                                 <input type="button" id="btnsaveComment" style="margin-top: 10px"
-ng-disabled="commentForm.userComment.$dirty && commentForm.userComment.$invalid || commentForm.visitorName.$dirty && commentForm.visitorName.$invalid || commentForm.visitorEmail.$dirty && commentForm.visitorEmail.$invalid"
+                                                       ng-disabled="commentForm.userComment.$dirty && commentForm.userComment.$invalid || commentForm.visitorName.$dirty && commentForm.visitorName.$invalid || commentForm.visitorEmail.$dirty && commentForm.visitorEmail.$invalid"
                                                        ng-click="saveComment()"
                                                        class="btn btn-success"
                                                        value="ارسال">
