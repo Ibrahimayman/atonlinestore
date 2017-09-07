@@ -46,7 +46,7 @@ router.post('/add-product', upload.array('productPhotos', 8), function (req, res
             req.checkBody('price', 'يجب ادخال سعر البيع').notEmpty();
             req.checkBody('buyingPrice', 'يجب ادخال سعر الشراء').notEmpty();
             req.checkBody('quantity', 'يجب ادخال الكمية').notEmpty();
-            req.checkBody('videoSrc', 'يجب ادخال رابط الفيديو').notEmpty();
+            // req.checkBody('videoSrc', 'يجب ادخال رابط الفيديو').notEmpty();
             var errors = req.validationErrors();
             if (errors) {
                 req.flash("error", errors);
