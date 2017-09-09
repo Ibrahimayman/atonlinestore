@@ -16,7 +16,7 @@ var ProductSchema = new Schema({
     Status: Array,
     colors: Array,
     videoSrc: {type: String},
-    size: {type: Number}
+    size: {type: String}
 });
 
 ProductSchema.plugin(mongoosastic, {
