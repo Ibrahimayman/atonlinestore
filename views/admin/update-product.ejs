@@ -1,1 +1,112 @@
-<% layout('layoutAdmin') %>
+<% layout('../views/admin/layoutAdmin') %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+
+            <div id="messages">
+
+                <% Object.keys(messages).forEach(function (type) { %>
+                <ul class="<%= type %>">
+                    <% messages[type].forEach(function (message) { %>
+                    <% if(message.msg === undefined) { %>
+                    <li><%= message %></li>
+                    <% } else { %>
+                    <li><%= message.msg %></li>
+                    <% } %>
+
+                    <% }) %>
+                </ul>
+                <% }) %>
+            </div>
+
+            <form method="post" action="/admin/update-product/:id">
+                <div class="form-group">
+                    <label for="name">اسم المنتج: </label>
+                    <input type="text" class="form-control" value="<%= product.name %>" name="name" placeholder="الاسم">
+                </div>
+
+                <div class="form-group">
+                    <label for="price">سعر الشراء: </label>
+                    <input type="number" class="form-control" value="<%= product.price %>" name="price"
+                           placeholder="سعر الشراء">
+                </div>
+
+                <div class="form-group">
+                    <label for="buyingPrice">سعر البيع : </label>
+                    <input type="number" class="form-control" value="<%= product.buyingPrice %>" name="buyingPrice"
+                           placeholder="سعر البيع">
+                </div>
+
+                <div class="form-group">
+                    <label for="price">الكمية: </label>
+                    <input type="number" value="<%= product.quantity %>" class="form-control" name="quantity">
+                </div>
+
+                <div class="form-group">
+                    <label for="price">المقاس : </label>
+                    <input type="text" value="<%= product.size %>" class="form-control" name="size">
+                </div>
+
+                <div class="form-group">
+                    <label for="category">القسم : </label>
+                    <select class="form-control" name="category" title="Choose one of the following...">
+                        <% for(var i = 0; i < categories.length;i++) { %>
+                        <option value="<%= categories[i].id %>"> <%= categories[i].name %> </option>
+                        <% } %>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="price">حالة المنتج: </label>
+                    <input type="hidden" id="StatusValues" name="Status">
+                    <label class="checkbox-inline"><input type="checkbox" value="new">new</label>
+                    <label class="checkbox-inline"><input type="checkbox" value="sale">sale</label>
+                    <label class="checkbox-inline"><input type="checkbox" value="out of stock">out of stock</label>
+                </div>
+
+                <div class="form-group" style="display: none" id="priceAfterOffer">
+                    <label for="priceAfterOffer">السعر بعد الخصم: </label>
+                    <input type="number" class="form-control" name="priceAfterOffer" placeholder="السعر بعد الخصم">
+                </div>
+
+                <div class="form-group">
+                    <label for="videoSrc">رابط الفيديو : </label>
+                    <input type="text" class="form-control" name="videoSrc" placeholder="رابط الفيديو">
+                </div>
+
+                <div class="form-group">
+                    <label for="description">تفاصيل المنتج : </label>
+                    <textarea class="form-control" rows="6" placeholder="تفاصيل المنتج" name="description"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="price">الصور: </label>
+                    <input class="form-control" type="file" name="productPhotos" multiple>
+                </div>
+
+                <div class="row justify-content-md-center">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-8">
+                        <button type="submit" class="btn btn-success btn-block">
+                            <i class="fa fa-plus-square"></i>
+                            حفظ المنتج
+                        </button>
+                    </div>
+                    <div class="col-sm-2"></div>
+                </div>
+
+            </form>
+        </div>
+
+        <div class="col-lg-6">
+
+            <% for (var i = 0 ; i < product.image.length ; i++) { %>
+            <img class="img-thumbnail img-responsive" width="100" height="100"
+                 src="../../public/uploads/<%= product.image[i].name %>">
+            <% } %>
+
+
+        </div>
+    </div>
+</div>

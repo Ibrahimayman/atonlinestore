@@ -1,4 +1,4 @@
-<% layout('layoutAdmin') %>
+<% layout('../views/admin/layoutAdmin') %>
 
 <div class="content" ng-controller="ProductCtrl">
     <div class="row">
@@ -7,8 +7,10 @@
                 <thead>
                 <tr>
                     <th>#</th>
+                    <th class="center">صورة المنتج</th>
                     <th>اسم المنتج</th>
-                    <th>السعر</th>
+                    <th>سعر الشراء</th>
+                    <th>سعر البيع</th>
                     <th>الكمية</th>
                     <th>القسم</th>
                     <th>العمليات</th>
@@ -18,17 +20,21 @@
                 <% for(var i = 0; i < products.length ; i++) { %>
                 <tr>
                     <td> <%= (i) + 1 %> </td>
+                    <td class="center"> <img class="img-thumbnail img-responsive img-circle img-rounded" width="50" height="50" src="../../public/uploads/<%= products[i].image[0].name %>"> </td>
                     <td> <%= products[i].name %> </td>
-                    <td> <%= products[i].price %> </td>
-                    <td> <%= products[i].quantity %> </td>
-                    <td> <%= products[i].category.name %> </td>
-                    <td>
-                        <a href="javascript:void(0)" target="_blank" title="تعديل منتج"><i class="fa fa-edit"></i></a>
+                    <td class="center"> <%= products[i].price %> </td>
+                    <td class="center"> <%= products[i].buyingPrice %> </td>
+                    <td class="center"> <%= products[i].quantity %> </td>
+                    <td class="center"> <%= products[i].category.name %> </td>
+                    <td class="center">
+                        <a href="/admin/update-product/<%= products[i]._id %>" target="_blank" title="تعديل منتج"><i
+                                    class="fa fa-edit"></i></a>
                         <a href="javascript:void(0)"
                            ng-click="showRemoveModal('<%= products[i]._id %>')"
                            title="حذف منتج">
                             <i class="fa fa-trash"></i></a>
-                        <a href="/product/<%= products[i]._id %>" target="_blank" title=" مشاهدة المنتج "><i class="fa fa-eye"></i></a>
+                        <a href="/product/<%= products[i]._id %>" target="_blank" title=" مشاهدة المنتج "><i
+                                    class="fa fa-eye"></i></a>
                     </td>
                 </tr>
                 <% } %>
@@ -49,10 +55,11 @@
                     هل تريد حذف المنتج ؟
                 </div>
                 <div class="modal-footer">
-
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" ng-click="DeleteProduct()" class="btn btn-danger">حذف</button>
-
+                    <form method="post" action="/admin/ALlProducts">
+                        <input type="hidden" id="proDelId" name="proDelId">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-danger">حذف</button>
+                    </form>
                 </div>
             </div>
         </div>

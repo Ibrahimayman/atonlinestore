@@ -5,6 +5,8 @@ var router = require("express").Router(),
     mime = require("mime"),
     crypto = require("crypto"),
     passportConf = require("../config/passport"),
+    del = require('delete'),
+    fs = require('fs'),
     multer = require('multer');
 
 var storage = multer.diskStorage({
@@ -24,13 +26,33 @@ router.get('/add-product', passportConf.isAuthenticated, function (req, res, nex
     res.render('admin/add-product', {errors: req.flash('errors'), pageTitle: "اضافة منتج", req: req});
 });
 
-// router.get('/update-product/:proId', passportConf.isAuthenticated, function (req, res, next) {
-//     Product.find({_id: req.params.id}, function (err, product) {
-//         if (err) return next(err);
-//         // res.render('admin/update-product', {errors: req.flash('errors'), product: product, pageTitle: "تعديل منتج"});
-//         res.redirect('/admin/update-product');
-//     });
-// });
+// get update product page..
+router.get('/admin/update-product/:id', passportConf.isAuthenticated, function (req, res, next) {
+    Product.findById({_id: req.params.id}, function (err, product) {
+        if (err) return next(err);
+        // res.send(product);
+        res.render('admin/update-product', {errors: req.flash('errors'), product: product, pageTitle: "تعديل منتج"});
+    });
+});
+
+// post for update...
+router.post('/admin/update-product/:id', passportConf.isAuthenticated, function (req, res, next) {
+    Product.findById(req.params.id, function (err, result) {
+        if (err) return next(err);
+        else {
+            result.buyingPrice = req.body.buyingPrice || result.buyingPrice;
+            result.quantity = req.body.quantity || result.quantity;
+
+            result.save((err, todo) => {
+                if (err) {
+                    res.status(500).send(err)
+                }
+                res.redirect("/admin/ALlProducts");
+            });
+        }
+    })
+});
+
 
 router.get('/admin/ALlProducts', passportConf.isAuthenticated, function (req, res, next) {
     Product.find({}).populate("category").exec(function (err, products) {
@@ -38,6 +60,7 @@ router.get('/admin/ALlProducts', passportConf.isAuthenticated, function (req, re
         res.render('admin/AllProducts', {errors: req.flash('errors'), products: products, pageTitle: "جميع المنتجات"});
     })
 });
+
 
 router.post('/add-product', upload.array('productPhotos', 8), function (req, res, next) {
     async.waterfall([
@@ -62,7 +85,8 @@ router.post('/add-product', upload.array('productPhotos', 8), function (req, res
                     category: req.body.category,
                     priceAfterOffer: req.body.priceAfterOffer,
                     Status: req.body.Status.split(","),
-                    videoSrc : req.body.videoSrc
+                    videoSrc: req.body.videoSrc,
+                    size: req.body.size
                 });
                 newProduct.save(function (err, result) {
                     if (err) return next(err);
@@ -88,13 +112,33 @@ router.post('/add-product', upload.array('productPhotos', 8), function (req, res
     ]);
 });
 
+// for client side.
 router.delete('/api/product/remove/:id', function (req, res) {
 
     Product.findByIdAndRemove({_id: req.params.id}, function (err, result) {
-        if (err) return res.send({type: "error", message: err});
-        res.send({type: "success", message: "تم مسح المنتج بنجاح"});
+        var files = result.image;
+        deleteFiles(files, function (err) {
+            if (err) {
+                console.log(err);
+            } else {
+                if (err) return res.send({type: "error", message: err});
+                res.send({type: "success", message: "تم مسح المنتج بنجاح"});
+            }
+        });
     });
+});
 
+// for sever side
+router.post('/admin/ALlProducts', function (req, res) {
+    Product.findByIdAndRemove({_id: req.body.proDelId}, function (err, result) {
+        var files = result.image;
+        for (var x = 0; x < files.length; x++) {
+            fs.unlink("./public/uploads/" + files[x].name, function (err) {
+                if (err) return;
+            });
+        }
+        res.redirect("/admin/ALlProducts");
+    });
 });
 
 module.exports = router;

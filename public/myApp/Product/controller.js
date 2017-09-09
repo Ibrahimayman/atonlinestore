@@ -7,18 +7,20 @@ app.controller("ProductCtrl", function ($scope, $http, toaster, $timeout, Produc
         $http.delete('/admin/api/product/remove/' + ProductId)
             .success(function (data) {
                 $("#RemoveModal").modal("hide");
-                console.log(data);
+                //console.log(data);
                 toaster.pop(data.type, "حذف منتج", data.message, 2000);
                 // Refresh data table 
                 window.location.reload();
             })
             .error(function (data) {
                 toaster.pop(data.type, "حذف منتج", data.message, 2000);
+                window.location.reload();
             });
     };
 
     $scope.showRemoveModal = function (id) {
         ProductId = id;
+        $("#proDelId").val(ProductId);
         $("#RemoveModal").modal("show");
     };
 

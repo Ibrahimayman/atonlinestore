@@ -6,12 +6,17 @@ var User = require("../models/user");
 var Product = require("../models/product");
 var Cart = require("../models/cart");
 var async = require("async");
+var _ = require("lodash");
 var stripe = require("stripe")('sk_test_90yMCyP0kAVCmeJSs22PDx2m');
 
 
 function Paginate(req, res, next) {
-    var perPage = 100;
-    var page = req.param('page');
+    var perPage = 16;
+    var page = req.params.page;
+    if (page === undefined)
+        page = 0;
+    else
+        page = page - 1;
     Product
         .find({category: req.params.id})
         .skip(perPage * page)
@@ -21,7 +26,14 @@ function Paginate(req, res, next) {
             if (err) return next(err);
             Product.count({category: req.params.id}).exec(function (err, count) {
                 if (err) return next(err);
-                res.render("main/category", {products: products, pages: count / perPage, categoryId: req.params.id})
+                else {
+                    var pages = Math.round(count / perPage);
+                    res.render("main/category", {
+                        products: products,
+                        pages: pages + 1,
+                        categoryId: req.params.id
+                    })
+                }
             });
         });
 }
