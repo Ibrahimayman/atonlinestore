@@ -21,6 +21,7 @@
             </div>
 
             <form method="post" action="/admin/update-product/:id">
+                <input type="hidden" name="product_id" id="product_id" value="<%= product._id %>"/>
                 <div class="form-group">
                     <label for="name">اسم المنتج: </label>
                     <input type="text" class="form-control" value="<%= product.name %>" name="name" placeholder="الاسم">

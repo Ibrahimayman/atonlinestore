@@ -5078,6 +5078,7 @@ ul.bs-glyphicons-list {
 }
 ul.nofitications-dropdown {
     padding: 0;
+    display: inline-flex;
 }
 /*---responsive 1600px-----*/
 @media (max-width:1600px){

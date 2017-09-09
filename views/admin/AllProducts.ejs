@@ -27,7 +27,7 @@
                     <td class="center"> <%= products[i].quantity %> </td>
                     <td class="center"> <%= products[i].category.name %> </td>
                     <td class="center">
-                        <a href="/admin/update-product/<%= products[i]._id %>" target="_blank" title="تعديل منتج"><i
+                        <a href="/admin/update-product/<%= products[i]._id %>" title="تعديل منتج"><i
                                     class="fa fa-edit"></i></a>
                         <a href="javascript:void(0)"
                            ng-click="showRemoveModal('<%= products[i]._id %>')"

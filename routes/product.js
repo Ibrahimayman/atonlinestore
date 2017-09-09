@@ -8,6 +8,7 @@ var router = require("express").Router(),
     del = require('delete'),
     fs = require('fs'),
     multer = require('multer');
+var ObjectId = require('mongodb').ObjectID;
 
 var storage = multer.diskStorage({
     destination: function (req, file, callback) {
@@ -37,11 +38,17 @@ router.get('/admin/update-product/:id', passportConf.isAuthenticated, function (
 
 // post for update...
 router.post('/admin/update-product/:id', passportConf.isAuthenticated, function (req, res, next) {
-    Product.findById(req.params.id, function (err, result) {
-        if (err) return next(err);
+    Product.findById(req.body.product_id, function (err, result) {
+        if (err) res.status(500).send(err);
         else {
+            result.name = req.body.name || result.name;
+            result.price = req.body.price || result.price;
             result.buyingPrice = req.body.buyingPrice || result.buyingPrice;
             result.quantity = req.body.quantity || result.quantity;
+            result.size = req.body.size || result.size;
+
+            result.videoSrc = req.body.videoSrc || result.videoSrc;
+            result.description = req.body.description || result.description;
 
             result.save((err, todo) => {
                 if (err) {

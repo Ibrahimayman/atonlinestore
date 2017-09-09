@@ -7,8 +7,8 @@ var User = require("../models/user");
 var Cart = require("../models/cart");
 var Product = require("../models/product");
 var category = require("../models/category");
+var bills = require("../models/Bill");
 var moment = require('moment');
-
 moment.locale('ar-SA');
 
 router.get("/users", function (req, res, next) {
@@ -23,13 +23,16 @@ router.get("/index", function (req, res, next) {
     User.count({}, function (err, countUsers) {
         Product.count({}, function (err, countProduct) {
             category.count({}, function (err, countCategory) {
-                if (err) return next(err);
-                res.render("admin/index", {
-                    pageTitle: "الصفحة الرئيسية",
-                    countUsers: countUsers,
-                    countProduct: countProduct,
-                    countCategory: countCategory
-                })
+               bills.count({},function (err,billsCount) {
+                   if (err) return next(err);
+                   res.render("admin/index", {
+                       pageTitle: "الصفحة الرئيسية",
+                       countUsers: countUsers,
+                       countProduct: countProduct,
+                       countCategory: countCategory,
+                       billsCount : billsCount
+                   })
+               })
             });
         });
     });
