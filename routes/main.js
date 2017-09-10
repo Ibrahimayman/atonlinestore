@@ -70,7 +70,7 @@ stream.on('close', function () {
 
 router.get("/", function (req, res, next) {
     /* get newArrivals */
-    Product.find({Status: "new"}).limit(4).exec(function (err, result) {
+    Product.find({homePage: "newArrival"}).limit(4).exec(function (err, result) {
         if (err) return next(err);
         res.render("main/product-main", {newArrivals: result})
     });

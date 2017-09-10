@@ -57,13 +57,16 @@
                     <div class="grid-arr">
                         <div class="grid-arrival">
                             <figure>
-                                <a href="/product/<%= newArrivals[i]._id %>" class="new-gri" data-toggle="modal" data-target="#myModal1">
+                                <a href="/product/<%= newArrivals[i]._id %>" class="new-gri" data-toggle="modal"
+                                   data-target="#myModal1">
                                     <div class="grid-img">
-                                        <img src="/public/uploads/<%= newArrivals[i].image[0].name %>" class="img-responsive"
+                                        <img src="/public/uploads/<%= newArrivals[i].image[0].name %>"
+                                             class="img-responsive"
                                              alt="">
                                     </div>
                                     <div class="grid-img">
-                                        <img src="/public/uploads/<%= newArrivals[i].image[1].name %>" class="img-responsive"
+                                        <img src="/public/uploads/<%= newArrivals[i].image[1].name %>"
+                                             class="img-responsive"
                                              alt="">
                                     </div>
                                 </a>
@@ -98,9 +101,11 @@
                                 <% for (var j = 0; j < newArrivals[i].Status.length; j++) { %>
                                 <% if(newArrivals[i].Status[j] === "sale"){ %>
                                 <del> <%= newArrivals[i].buyingPrice - newArrivals[i].priceAfterOffer %>  </del>
-                                <% } %>
-                                <% } %>
                                 <em class="item_price"> <%= newArrivals[i].priceAfterOffer %> ج . م </em></p>
+                            <% } else{ %>
+                            <em class="item_price"> <%= newArrivals[i].buyingPrice %> ج . م </em></p>
+                            <% } %>
+                            <% } %>
 
                             <a href="/product/<%= newArrivals[i]._id %>"
                                data-text="Add To Cart" class="my-cart-b item_add">شراء</a>
@@ -133,7 +138,8 @@
                 </div>
                 <div class="col-md-4 latest-grid">
                     <div class="latest-top">
-                        <img src="../../public/images/l2.jpg.jpg" class="img-responsive" alt="احذية من أتميدة أون لاين ستور">
+                        <img src="../../public/images/l2.jpg.jpg" class="img-responsive"
+                             alt="احذية من أتميدة أون لاين ستور">
                         <div class="latest-text">
                             <h4>Shoes</h4>
                         </div>

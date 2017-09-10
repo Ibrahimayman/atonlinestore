@@ -50,6 +50,8 @@ router.post('/admin/update-product/:id', passportConf.isAuthenticated, function 
             result.videoSrc = req.body.videoSrc || result.videoSrc;
             result.description = req.body.description || result.description;
 
+            result.homePage = req.body.homePage || result.homePage;
+
             result.save((err, todo) => {
                 if (err) {
                     res.status(500).send(err)

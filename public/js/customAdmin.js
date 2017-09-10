@@ -5,6 +5,7 @@
 $(function () {
 
     var ProductStatus = [];
+    var homePageStatus;
 
     $("html").niceScroll();
 
@@ -34,6 +35,17 @@ $(function () {
         }
         $("#StatusValues").val(ProductStatus);
     });
+
+    // $('input:checkbox').change(function () {
+    //     if ($(this).prop('checked') === true) {
+    //         homePageStatus = ($(this).val());
+    //     }
+    //     else {
+    //         homePageStatus = "";
+    //     }
+    //     $("#homePage").val(ProductStatus);
+    //     console.log($("#homePage").val());
+    // });
 
 });
 
