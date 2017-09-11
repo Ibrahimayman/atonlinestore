@@ -2,25 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd284a70-dd67-4c44-9e8a-555644d18d7d" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/0c6274e88a449e241937f3d67ddf3a461504828653312.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/28afb82be02ac0d28e3b12f5c595e9001504912379248.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/3485cbc80d23fbda80c7563fc76fdd8d1504912170061.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/3845ee811da87411fb9065135d93f9191504912752427.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/59096b45e030f6cb0a9dd47622635e3f1504912307087.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/5b51cefab0561a7844da0a67f52845b01504912647065.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/61443912d20998e978b53eae4acd207a1504912752432.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/6ad62df729e91f6bba9159739a6db7921505087164732.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/6e7d6064aea3e32c145ed766d5c887df1504912170062.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/7fa36d5ab11b3d97154a9f4d55c970ee1504912307086.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/8d25e1f2cf5a7a8ca468c7ad17d8f50a1504912647066.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/93d35cf24cd80b76bc90c03d2f4eb4541504828653310.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/ae5c794e3076ae672d9675efc92e66a71505087164729.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/af241f7ecbaa75e1a3d773f139bd9e1c1504912608311.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/af31bcec5116c13f507f6a4d611a35401504912379249.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/cdc1807c9bb0c4b68042f24dd2e2f1021504912608312.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/f5b57baf456080740f7950e3f86b72fb1505087164729.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/fb5bdadb8295632d6706e31553864bbc1505087164726.jpeg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/032df6be496d6290d5f9c08ba06783231504956415986.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/039fc6ff79b0dbda7f02accc044c8c401504957513598.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/0417c855e54ac330b181aae9d91406b61504913287466.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/0ec9e3ebf5c47ec1c39afc66ac618ae71504954207036.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/108c6d199cb2f4f02f6cbac69f787d581504957118877.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/168818ba524dda938d7a064408f072431504912046064.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/1b59b373c14b02036d4f4df8ae9789361504958291189.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/2d0e0e7f59ab870d4c5a2a4e8ef0fee31504955433871.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/2dc621b9e572a2ef22b51a6056c7ccda1504956160935.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/36907402742a5bb1bff307170138550d1504957513599.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/4604b59a40e7c76577b385a3ed254a691504954512277.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/4a31b481cb2ad68c36dd944e666c393d1504958730992.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/4f673d10b51dfac045a7091c770d852c1504913287464.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/5293d79104fec38576089f8b418b6f901504912111271.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/572ed532538e0a076bc3743bd9d0dc611504955798023.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/613c65f096720a56987b7626867ad6251504955502917.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/63a40507dcad5fe8d723f64ba81c53fb1504958291187.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/680c44e47eab75a3bf5940a90073ac4a1504954512277.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/6a94e0723c483916785199b9b297cc201504956415983.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/6f2386c0c9d47ea8879452ff4ee1bc741504956160938.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/7d02f30e5471375a7cb9f94a5835d6cd1504956160940.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/7e6de65e2da3f410c44fed57c2683c7c1504957513600.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/9bc8e74cb8d524ecc4e1db2ecfede2d01504912111268.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/a01414ac0c4fc3ec7c268e63a801fcf21504958730990.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/a92bbad6cd7432c36999c8c9eca5fbef1504955502915.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/acf4b77bf58554794470beae09b9e7f81504957118876.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/b8e09106b2c53535ea9cd448a731add91504912046061.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/e88debdc965ef0085898ebd7074f42491504956654295.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/ec118d52b8a673b247f845afafe2f9391504955433870.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/ef2aafc4e3dad44e8ba18883494683a81504954207034.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/f3d717cc1e301de141347bb9669a64bd1504956654293.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/f6ab7be39f703b2056e3548c0fdea30e1504955798025.jpeg" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -37,7 +50,7 @@
       <file leaf-file-name="offers.ejs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/main/offers.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
+            <state relative-caret-position="516">
               <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
               <folding />
             </state>
@@ -165,7 +178,7 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-9" />
     <option name="width" value="1924" />
     <option name="height" value="1050" />
@@ -274,15 +287,15 @@
       <workItem from="1504737571996" duration="13384000" />
       <workItem from="1504810730075" duration="36106000" />
       <workItem from="1505054407655" duration="9042000" />
-      <workItem from="1505123356825" duration="4039000" />
+      <workItem from="1505123356825" duration="6439000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="220284000" />
+    <option name="totallyTimeSpent" value="222684000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1050" extended-state="7" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17239584" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -665,7 +678,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/main/offers.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
+        <state relative-caret-position="516">
           <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
           <folding />
         </state>
