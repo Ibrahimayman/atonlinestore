@@ -12,6 +12,7 @@
                     <th>سعر الشراء</th>
                     <th>سعر البيع</th>
                     <th>الكمية</th>
+                    <th>المقاس</th>
                     <th>القسم</th>
                     <th>العمليات</th>
                 </tr>
@@ -25,6 +26,7 @@
                     <td class="center"> <%= products[i].price %> </td>
                     <td class="center"> <%= products[i].buyingPrice %> </td>
                     <td class="center"> <%= products[i].quantity %> </td>
+                    <td class="center"> <%= products[i].size %> </td>
                     <td class="center"> <%= products[i].category.name %> </td>
                     <td class="center">
                         <a href="/admin/update-product/<%= products[i]._id %>" title="تعديل منتج"><i
