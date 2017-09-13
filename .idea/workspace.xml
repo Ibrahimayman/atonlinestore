@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd284a70-dd67-4c44-9e8a-555644d18d7d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/secret.js" afterPath="$PROJECT_DIR$/config/secret.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/main/boilerplate.ejs" afterPath="$PROJECT_DIR$/views/main/boilerplate.ejs" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,31 +16,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AllProducts.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/admin/AllProducts.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="28" column="69" lean-forward="true" selection-start-line="28" selection-start-column="69" selection-end-line="28" selection-end-column="69" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="product-main.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/main/product-main.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="23" column="22" lean-forward="true" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="secret.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="secret.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/secret.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="12" column="14" lean-forward="true" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+            <state relative-caret-position="350">
+              <caret line="17" column="6" lean-forward="true" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="boilerplate.ejs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/main/boilerplate.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -131,7 +121,6 @@
         <option value="$PROJECT_DIR$/views/admin/Expenses.ejs" />
         <option value="$PROJECT_DIR$/views/admin/users.ejs" />
         <option value="$PROJECT_DIR$/views/admin/add-product.ejs" />
-        <option value="$PROJECT_DIR$/views/main/boilerplate.ejs" />
         <option value="$PROJECT_DIR$/models/product.js" />
         <option value="$PROJECT_DIR$/public/css/Admin/Adminstyle.css" />
         <option value="$PROJECT_DIR$/routes/admin.js" />
@@ -146,6 +135,7 @@
         <option value="$PROJECT_DIR$/views/admin/AllProducts.ejs" />
         <option value="$PROJECT_DIR$/views/main/product-main.ejs" />
         <option value="$PROJECT_DIR$/config/secret.js" />
+        <option value="$PROJECT_DIR$/views/main/boilerplate.ejs" />
       </list>
     </option>
   </component>
@@ -167,7 +157,7 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-9" />
     <option name="width" value="1924" />
     <option name="height" value="1050" />
@@ -200,12 +190,13 @@
             <path>
               <item name="EcommerceV0.1" type="b2602c69:ProjectViewProjectNode" />
               <item name="EcommerceV0.1" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="EcommerceV0.1" type="b2602c69:ProjectViewProjectNode" />
               <item name="EcommerceV0.1" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -288,15 +279,15 @@
       <workItem from="1505054407655" duration="9042000" />
       <workItem from="1505123356825" duration="7036000" />
       <workItem from="1505217717684" duration="2045000" />
-      <workItem from="1505297390157" duration="5582000" />
+      <workItem from="1505297390157" duration="6424000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="230908000" />
+    <option name="totallyTimeSpent" value="231750000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1050" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17239584" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -529,13 +520,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/main/boilerplate.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="31" lean-forward="true" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/mongoose/lib/error/cast.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -672,7 +656,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/main/product-main.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
+        <state relative-caret-position="575">
           <caret line="23" column="22" lean-forward="true" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
           <folding />
         </state>
@@ -680,8 +664,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/secret.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="12" column="14" lean-forward="true" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+        <state relative-caret-position="350">
+          <caret line="17" column="6" lean-forward="true" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/main/boilerplate.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
           <folding />
         </state>
       </provider>
