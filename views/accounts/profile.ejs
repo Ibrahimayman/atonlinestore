@@ -1,4 +1,4 @@
-<% layout('boilerplate') %>
+<% layout('../views/main/boilerplate') %>
 <title>الحساب الخاص بك</title>
 <div class="container" ng-controller="saveProfileCtrl">
     <br/><br/>
@@ -50,8 +50,14 @@
                     </select>
                     <% } else { %>
                     <select class="form-control" name="sex">
-                        <option value="ذكر" <% if (user.profile.sex == 'ذكر') { %>selected<% } %> >ذكر</option>
-                        <option value="انثي" <% if (user.profile.sex == 'انثي') { %>selected<% } %> >انثي</option>
+                        <option value="ذكر" <% if (user.profile.sex == 'ذكر') { %>selected
+                                <% } %>
+                        >ذكر
+                        </option>
+                        <option value="انثي" <% if (user.profile.sex == 'انثي') { %>selected
+                                <% } %>
+                        >انثي
+                        </option>
                     </select>
                     <% } %>
                 </div>
@@ -63,10 +69,10 @@
 
                             <div class="form-group">
                                 <label for="day">اليوم : </label>
-                                <select class="form-control" name="day" id="day">
-                                    <% for(var day = 1;  day < 32 ; day++) { %>
-                                    <option value="<%= day %> "> <%= day %> </option>
-                                    <% } %>
+                                <select class="form-control" name="day" >
+
+                                    <option ng-repeat="d in days" value="{{d}}"> {{d}}</option>
+
                                 </select>
                             </div>
                         </div>
@@ -75,9 +81,7 @@
                             <div class="form-group">
                                 <label for="month">الشهر : </label>
                                 <select class="form-control" name="month">
-                                    <% for(var month = 1;  month < 13 ; month++) { %>
-                                    <option value="<%= month %>"> <%= month %> </option>
-                                    <% } %>
+                                    <option ng-repeat="m in Months" value="{{m}}"> {{m}}</option>
                                 </select>
                             </div>
                         </div>
@@ -86,9 +90,7 @@
                             <div class="form-group">
                                 <label for="year">السنة : </label>
                                 <select class="form-control" name="year">
-                                    <% for(var year = 1970;  year < 2010 ; year++) { %>
-                                    <option value="<%= year %> "> <%= year %> </option>
-                                    <% } %>
+                                    <option ng-repeat="y in years" value="{{y}}"> {{y}}</option>
                                 </select>
                             </div>
                         </div>
