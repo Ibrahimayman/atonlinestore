@@ -295,6 +295,11 @@ router.get("/help", function (req, res, next) {
     res.render("main/help");
 });
 /* usage policy */
+/* our maps */
+router.get("/our-maps", function (req, res, next) {
+    res.render("main/our-maps");
+});
+/* our maps */
 
 
 /* this section for test */

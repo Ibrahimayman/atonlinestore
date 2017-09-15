@@ -89,7 +89,7 @@ body {
 }
 
 .heder-bottom {
-    padding: 1em 0;
+    /*padding: 1em 0;*/
     background: #0d59af;
     margin-bottom: -8px;
 }
@@ -3622,7 +3622,7 @@ li.bt-nn h6 {
     }
 
     .heder-bottom {
-        padding: 1em 0 0.8em;
+        /*padding: 1em 0 0.8em;*/
     }
 
     .total-item, .cart-items {
@@ -4006,7 +4006,7 @@ li.bt-nn h6 {
     }
 
     .heder-bottom {
-        padding: 0.3em 0 0.8em;
+        /*padding: 0.3em 0 0.8em;*/
     }
 }
 
