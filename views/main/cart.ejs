@@ -64,7 +64,7 @@
                         <i class="fa fa-cc-visa"></i>
                 </button>
                   <% } else { %>
-                  <button type="submit" class="btn btn-primary btn-lg buybutton">شــراء
+                  <button type="submit" data-toggle="modal" data-target="#MessageModal" class="btn btn-primary btn-lg buybutton">شــراء
                         <i class="fa fa-cc-visa"></i>
                 </button>
                   <% } %>
@@ -189,6 +189,25 @@
 
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button type="button" ng-click="DeleteFromCart()" class="btn btn-danger">حذف</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="MessageModal" tabindex="-1" role="dialog" aria-labelledby="RemoveModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">رسالة..</h4>
+                </div>
+                <div class="modal-body">
+                    عفوا بعض مكونات الموقع ما زالت تحت الانشاء . يرجي استخدام رقم واتس اب الموجود فى اعلي الصفحة لاتمام عملية الشراء
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 
                 </div>
             </div>
