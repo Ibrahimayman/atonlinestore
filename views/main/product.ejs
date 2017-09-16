@@ -69,10 +69,10 @@
 
                                 <% for (var j = 0; j < product.Status.length; j++) { %>
                                 <% if(product.Status[j] === "sale"){ %>
-                                <input type="text" disabled="disabled" name="priceValue" id="priceValue" class="form-control"
+                                <input type="text" name="priceValue" id="priceValue" class="form-control"
                                        value="<%= product.priceAfterOffer %>"/>
                                 <% } else { %>
-                                <input type="text" disabled="disabled" name="priceValue" id="priceValue" class="form-control"
+                                <input type="text" name="priceValue" id="priceValue" class="form-control"
                                        value="<%= product.buyingPrice %>"/>
                                 <% } %>
                                 <% } %>
