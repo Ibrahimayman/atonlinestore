@@ -137,7 +137,7 @@
 
         <!--Product Description-->
         <div class="product-w3agile">
-            <h3 class="tittle1">تفاصيل المنتج</h3>
+            <h3 class="tittle1">تقيمات المنتج والاراء</h3>
             <div class="product-grids">
                 <div class="col-md-4 product-grid">
                     <div id="owl-demo" class="owl-carousel">
@@ -256,31 +256,13 @@
                     <div class="tab-wl3">
                         <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
                             <ul id="myTab" class="nav nav-tabs left-tab" role="tablist">
-                                <li role="presentation" class="active"><a href="#home" id="home-tab" role="tab"
-                                                                          data-toggle="tab" aria-controls="home"
-                                                                          aria-expanded="true">التفاصيل</a></li>
-                                <li role="presentation"><a href="#reviews" role="tab" id="reviews-tab" data-toggle="tab"
-                                                           aria-controls="reviews">الاراء</a></li>
+
+                                <li><a href="#">الاراء</a></li>
 
                             </ul>
                             <div id="myTabContent" class="tab-content">
-                                <div role="tabpanel" class="tab-pane fade in active" id="home"
-                                     aria-labelledby="home-tab">
-                                    <div class="descr">
-                                        <h4><%= product.name %> </h4>
-                                        <div class="video">
-                                            <iframe id="my-player" controls
-                                                    class="video-js"
-                                                    src="<%= product.videoSrc %>"
-                                                    frameborder="0" allowfullscreen>
-                                            </iframe>
-                                        </div>
-                                        <p>
-                                            <%= product.description %>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div role="tabpanel" class="tab-pane fade" id="reviews" aria-labelledby="reviews-tab">
+
+                                <div>
                                     <!-- table of user comments -->
                                     <div class="row" ng-repeat="comment in comments">
                                         <div class="col-sm-1">

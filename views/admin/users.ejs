@@ -9,6 +9,7 @@
                 <tr>
                     <th>#</th>
                     <th>الاسم</th>
+                    <th>الصورة</th>
                     <th>تاريخ التسجيل</th>
                     <th>isActive</th>
                     <th>البريد الالكتروني</th>
@@ -19,6 +20,7 @@
                 <% for(var i = 0; i < users.length ; i++) { %>
                 <tr>
                     <td> <%= (i) + 1 %> </td>
+                    <td><img class="img-thumbnail img-responsive img-circle img-rounded" width="50" height="50" src="<%= users[i].profile.picture %>"></td>
                     <td> <%= users[i].profile.name %> </td>
                     <td> <%= moment(users[i].timeCreated).format("DD-MMM-YYYY") %> </td>
                     <td> <%= users[i].isActive %> </td>
@@ -31,7 +33,8 @@
                            ng-click="showRemoveModal('<%= users[i]._id %>')"
                            title="حذف المستخدم">
                             <i class="fa fa-trash"></i></a>
-                        <a href="/profile/<%= users[i]._id %>" target="_blank" title=" مشاهدة التفاصيل "><i class="fa fa-eye"></i></a>
+                        <a href="/profile/<%= users[i]._id %>" target="_blank" title=" مشاهدة التفاصيل "><i
+                                    class="fa fa-eye"></i></a>
                     </td>
                 </tr>
                 <% } %>
