@@ -13,7 +13,10 @@ var BillSchema = new Schema({
     }],
     total: {type: Number, default: 0},
     Date: {type: Date, default: Date.now},
-    paid: {type: Number}
+    paid: {type: Number},
+    orderType : {type: String},
+    number : {type: String},
+    address : {type: String}
 });
 
 module.exports = mongoose.model("Bill", BillSchema);

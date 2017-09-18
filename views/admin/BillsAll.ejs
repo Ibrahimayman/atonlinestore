@@ -10,7 +10,8 @@
                     <th>اسم العميل</th>
                     <th>سعر الفاتورة</th>
                     <th>التاريخ</th>
-                    <th>المدفوع</th>
+                    <th>نوع الطلب</th>
+                    <th>رقم الهاتف</th>
                     <th>العمليات</th>
                 </tr>
                 </thead>
@@ -21,14 +22,26 @@
                     <td> <%= bills[i].clientName %> </td>
                     <td> <%= bills[i].total %> </td>
                     <td> <%= moment(bills[i].Date).format("DD-MMM-YYYY") %> </td>
-                    <td> <%= bills[i].paid %> </td>
+                    <td>
+                        <% if(bills[i].orderType === "0") { %>
+                        افلاين
+                        <% } else{ %>
+                        اون لاين
+                        <% } %>
+                    </td>
+                    <td>
+                        <% if( bills[i].number != undefined ) { %>
+                        <%= bills[i].number %>
+                        <% } %>
+                    </td>
                     <td>
                         <a href="javascript:void(0)" title="تعديل فاتورة"><i class="fa fa-edit"></i></a>
                         <a href="javascript:void(0)"
                            ng-click="showRemoveModal('<%= bills[i]._id %>')"
                            title="حذف فاتورة">
                             <i class="fa fa-trash"></i></a>
-                        <a href="javascript:void(0)" target="_blank" title=" مشاهدة منتجات الفاتورة "><i class="fa fa-eye"></i></a>
+                        <a href="javascript:void(0)" target="_blank" title=" مشاهدة منتجات الفاتورة "><i
+                                    class="fa fa-eye"></i></a>
                     </td>
                 </tr>
                 <% } %>

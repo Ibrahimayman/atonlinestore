@@ -33,6 +33,11 @@ router.post('/api/bill/saveBill', passportConf.isAuthenticated, function (req, r
         function (callback) {
             newBill.clientName = req.body.clientName;
             newBill.items = req.body.items;
+
+            newBill.orderType = req.body.orderType;
+            newBill.number = req.body.number;
+            newBill.address = req.body.address;
+
             newBill.total = parseFloat(req.body.total).toFixed(2);
             newBill.save(function (err, response) {
                 if (err) return next(err);

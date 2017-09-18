@@ -151,14 +151,16 @@ app.controller("billCtrl", function ($scope, $http, $timeout, toaster, lodash) {
         });
         $("[name='total']").val(total);
         vm.items = items;
-
     };
 
     vm.saveBill = function () {
         var bill = {
             clientName: $("[name='clientName']").val(),
             items: items,
-            total: $("[name='total']").val()
+            total: $("[name='total']").val(),
+            orderType: $("[name='orderType']").val(),
+            number: $("[name='mobile']").val(),
+            address: $("[name='address']").val()
         };
         $http.post('/admin/api/bill/saveBill/', bill)
             .success(function (bill) {
@@ -167,7 +169,7 @@ app.controller("billCtrl", function ($scope, $http, $timeout, toaster, lodash) {
             .error(function (data) {
                 console.log('Error: ' + data);
             });
-    }
+    };
 
     vm.removeItem = function (item, price) {
         // remove item from Items Array.
