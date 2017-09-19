@@ -7,6 +7,7 @@ var Product = require("../models/product");
 var Cart = require("../models/cart");
 var async = require("async");
 var _ = require("lodash");
+var passportConf = require("../config/passport");
 var stripe = require("stripe")('sk_test_90yMCyP0kAVCmeJSs22PDx2m');
 
 
@@ -81,7 +82,7 @@ router.get("/products/:id/:page", function (req, res, next) {
 });
 
 // get user products from his cart.
-router.get('/cart', function (req, res, next) {
+router.get('/cart',passportConf.isAuthenticated, function (req, res, next) {
     Cart
         .findOne({owner: req.user._id})
         .populate('items.item')
